@@ -1,0 +1,108 @@
+.wd-black-theme{
+    background-color: black;
+    color:white;
+    margin-left:  12px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-color:rgb(47, 51, 54);
+}
+
+.wd-search-bar{
+    border-radius:50px;
+    width:90%;
+    background-color:darkgray;
+    color:white;
+    position:relative;
+}
+
+.wd-search-icon{
+    position:absolute;
+    left:12px;
+    top:13px;
+    margin-left: 5px
+}
+
+.wd-gear{
+    position:absolute;
+    right:12px;
+    top:13px;
+}
+
+.wd-menu-bar{
+    list-style-type: none; /* remove bullets */
+    margin:0;           /* Standard HTML lists have a certain amount of left-indentation.
+                            The amount varies on each browser.
+                            Some browsers use padding (Mozilla, Netscape, Safari) and others use margins (Internet Explorer, Opera).
+                            Remove this left-indentation consistently across all browsers, set both padding and margins to "0". */
+    padding:0;
+    display:inline;
+}
+
+.wd-menu-bar-items{
+    display:inline;
+    font-weight:bold;
+
+}
+#wd-a-b-section{
+    margin-top: 5px;
+
+    border-bottom: solid 5px;
+    border-color:rgb(47, 51, 54);
+}
+
+/*.wd-menu-bar-item-for-you{*/
+/*    border-bottom: 2px solid rgb(29,161,242);*/
+/*}*/
+
+a{
+    color:rgb(110, 118, 125);
+    font-size:15px ;
+    padding: 16px 16px 16px 16px;
+    text-decoration: none;
+}
+
+/*C.topics*/
+.wd-topic{
+    color:rgb(110,118,125);
+    font-size:13px;
+    margin-top: 5px;
+    margin-left:12px;
+}
+
+.wd-logos{
+    width:20px;
+    height:20px;
+    margin-left:16px;
+}
+
+.wd-news-pics{
+    width:100px;
+    height:100px;
+    margin-left: 16px;
+    float:right;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.wd-news-sub-title{
+    margin-left:12px;
+}
+
+.line-separator{
+    width:100%;
+    text-align:left;
+    color:rgb(110,118,125);
+}
+
+.wd-trendy-topics{
+    margin-top:5px;
+    margin-left:12px;
+
+}
+
+.wd-tweets-count{
+    color:darkgray;
+    margin-top: 5px;
+    font-size:10px;
+    margin-left:12px;
+}
