@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Practice</title>
+</head>
+<body>
+<!-- Embed JavaScript -->
+<!--    <h2>Embedded script tag</h2>-->
+<!--    <script>-->
+<!--        alert('Hello World!');-->
+<!--    </script>-->
+<h2> Writing to the DOM</h2>
+<h2>Calculating an HTML string</h2>
+<script>
+    const renderTodos = (todos) => `
+            <ul>
+                ${todos.map(todo => `<li>${todo}</li>`
+    ).join('')}
+            </ul>`;
+    const todos = ['Pickup kids', 'Feed dogs']
+    let html = renderTodos(todos);
+    document.write(html);
+</script>
+
+
+<!-- Load external JavaScript file -->
+    <script src="index.js"></script>
+
+</body>
+</html>
