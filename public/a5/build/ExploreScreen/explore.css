@@ -1,0 +1,62 @@
+/* Center (main content) */
+.wd-search-icon{
+    position:relative;
+    top:30px;
+    left:10px;
+}
+
+.wd-gear{
+    color:#0d6efd;
+    position:relative;
+    top:24px;
+}
+
+.wd-search-bar-margin{
+    margin-bottom: 10px;
+}
+.wd-search-bar-border-radius{
+    border-radius:20px;
+}
+
+.wd-nav-tabs-margin{
+    margin-bottom: 10px;
+}
+
+.wd-topic{
+    color:rgb(110,118,125);
+}
+
+.wd-font-weight-bold{
+    font-weight:bold;
+}
+
+.check-mark-verified-accounts {
+    padding-left: 5px;
+}
+
+.published-time{
+    font-weight: normal;
+    color:rgb(110,118,125);
+}
+
+.wd-tweet-pictures{
+    border-radius:20px;
+}
+
+.wd-tweets-count{
+    color:rgb(110,118,125);
+}
+
+/* Left (nav) */
+.wd-buttons{
+    border-radius: 30px 30px 30px 30px;
+    margin-top:5px;
+}
+
+.left-column-icons{
+    padding-right: 5px;
+}
+
+.list-group-margin{
+    margin-top: 17px;
+}
