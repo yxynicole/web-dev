@@ -1,17 +1,15 @@
-/*
-
-implements a function called WhoToFollowListItem that
-accepts a parameter called who.
-The parameter represents a single user we might want to follow.
-The function should return an HTML string that renders as shown above.
-The data in the who parameter contains properties that describe
-each user such as avatarIcon, userName, and handle. Feel free to re-use
-the HTML you wrote for the previous assignment.
-An example of the object who used to render the sample image is shown below.
-
-    {   avatarIcon: '../../images/virgin.png', userName: 'Virgin Galactic', handle: 'virgingalactic', },
-
-
- */
-
-// who => 'retunr html string'
+/* Implements a function called WhoToFollowListItem that
+* accepts a parameter called who.The parameter represents a single user we might want to follow.
+*/
+const whoToFollowListItem = (who) =>{
+    return (`
+        <li class="list-group-item ">
+            <div class = "row">
+                    <div class ="col-2"><img src= "${who.avatarIcon}" class ="img-fluid"></div>
+                    <div class ="col-8">${who.userName}<i class ="fas fa-check-circle check-mark-verified-accounts"></i><div>@${who.handle}</div></div>
+                    <div class ="col-2"><button class="btn btn-primary wd-buttons">Follow</button></div>
+            </div>
+        </li>
+    `);
+}
+export default whoToFollowListItem;

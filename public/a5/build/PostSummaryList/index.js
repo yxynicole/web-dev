@@ -1,6 +1,5 @@
 const ExploreComponent = () => {
     return(`
-        <div class = "col-xxl-6 col-xl-6 col-lg-8 col-md-10 col-sm-11 ">
         <!-- search bar AND gear -->
         <div class = "row wd-search-bar-margin">
             <!-- search bar-->
@@ -51,7 +50,7 @@ const ExploreComponent = () => {
                     </div>
 
                     <div class="col-2">
-                        <img src = "react-logo.png" alt = "ReactJS LOGO" class="img-fluid wd-tweet-pictures ">
+                        <img src = "" alt = "ReactJS LOGO" class="img-fluid wd-tweet-pictures ">
                     </div>
                 </div>
             </li>
@@ -101,7 +100,7 @@ const ExploreComponent = () => {
                 </div>
             </li>
         </ul>
-    </div>
+    
 
     `);
 }

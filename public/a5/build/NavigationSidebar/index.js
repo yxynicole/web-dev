@@ -3,7 +3,6 @@
 
 const NavigationSidebar = () => {
     return(`
-        <div class = "col-xxl-2 col-xl-2 col-lg-1 col-md-1  col-sm-1">
             <ul class="list-group list-group-margin">
                 <li class="list-group-item "><i class="fab fa-twitter left-column-icons"></i></li>
                 <li class="list-group-item "><i class="fas fa-home left-column-icons"></i>Home</li>
@@ -18,7 +17,6 @@ const NavigationSidebar = () => {
                     Tweet
                 </button>
             </ul> 
-        </div>
         `);
 }
 
