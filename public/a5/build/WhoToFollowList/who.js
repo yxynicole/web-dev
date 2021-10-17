@@ -6,7 +6,6 @@ const virginGalactic ={avatarIcon:"../WhoToFollowList/virgin-galactic.png", user
 const nasa = {avatarIcon:"../WhoToFollowList/nasa.jpeg", userName:'NASA', handle:"NASA"};
 const tesla ={avatarIcon:"../WhoToFollowList/tesla.png", userName:'Tesla', handle:"Tesla"};
 
-//who.js  exports an array as shown above.
 export default [
     java,
     relativitySpace,

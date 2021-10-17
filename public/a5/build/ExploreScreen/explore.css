@@ -1,4 +1,8 @@
 /* Center (main content) */
+.list-item-bg-color{
+    background-color: black;
+    color:white;
+}
 .wd-search-icon{
     position:relative;
     top:30px;

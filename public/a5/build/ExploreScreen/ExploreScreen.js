@@ -1,5 +1,5 @@
 import NavigationSidebar from "../NavigationSidebar/index.js";
-import ExploreComponent from "../PostSummaryList/index.js";
+import ExploreComponent from "../ExploreScreen/ExploreComponent.js";
 import WhoToFollowList from "../WhoToFollowList/index.js";
 
 (function () {
@@ -20,3 +20,7 @@ import WhoToFollowList from "../WhoToFollowList/index.js";
      </div>
     `;
 })();
+
+// eslint-disable-next-line no-undef
+const body = $("#body");
+body.css('background-color','black');
