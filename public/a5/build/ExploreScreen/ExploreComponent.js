@@ -23,16 +23,16 @@ const ExploreComponent = () => {
                     <a class="nav-link active" href="#">For you</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link list-item-bg-color" href="#">Trending</a>
+                    <a class="nav-link wd-list-item-bg-color" href="#">Trending</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link list-item-bg-color" href="#">News</a>
+                    <a class="nav-link wd-list-item-bg-color" href="#">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link list-item-bg-color" href="#">Sports</a>
+                    <a class="nav-link wd-list-item-bg-color" href="#">Sports</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link list-item-bg-color" href="#">Entertainment</a>
+                    <a class="nav-link wd-list-item-bg-color" href="#">Entertainment</a>
                 </li>
             </ul>
         <!-- contents -->

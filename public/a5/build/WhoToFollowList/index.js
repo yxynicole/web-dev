@@ -8,10 +8,10 @@ import whoArray from "./who.js";
 const WhoToFollowList = () =>{
     return(`
         <ul class="list-group list-group-margin ">           
-            <li class="list-group-item wd-font-weight-bold list-item-bg-color">Who to follow</li>
+            <li class="list-group-item wd-font-weight-bold wd-list-item-bg-color">Who to follow</li>
             ${
-                whoArray.map(whoToFollowListItem).join('')
-            }  
+        whoArray.map(whoToFollowListItem).join('')
+    }  
         </ul>   
     `)
 }

@@ -1,0 +1,103 @@
+.wd-list-item-bg-color{
+    background-color: black;
+    color:white;
+}
+/*---------------  center column--------------- */
+/* right side: users' avatar */
+.wd-user-avatar{
+    border-radius: 50%;
+}
+/* left-side: post list */
+/* 1st row: username + user handle + publishing time */
+.wd-user-name{
+    color:white;
+    font-weight: bold;
+}
+
+.wd-check-mark-verified-accounts {
+    padding-left: 5px;
+}
+
+.wd-user-handle{
+    font-weight: normal;
+    color:rgb(110,118,125);
+}
+
+.wd-published-time{
+    font-weight: normal;
+    color:rgb(110,118,125);
+}
+.wd-ellipsisIcon{
+    float: right;
+    color:rgb(110,118,125);
+}
+
+/* 2nd row: username's content */
+
+/* 3nd row: content in retweet */
+.wd-image{
+    border-radius: 15px 15px 15px 15px;
+}
+
+.wd-retweet-title{
+    font-weight: bold;
+}
+
+.wd-retweet-content{
+    color:rgb(110,118,125);
+}
+
+/* 4th row: icon bar*/
+#wd-icon-bar{
+    margin-left:10px;
+}
+
+.wd-icons-color{
+    color:rgb(110,118,125);
+}
+.wd-distance-btw-icon-and-count{
+    padding-left:10px;
+    color:rgb(110,118,125);
+
+}
+
+.wd-counts{
+    color:rgb(110,118,125);
+    margin-left:12px;
+}
+
+
+/*--------------- right column: PostSummaryList---------------*/
+.wd-tweet-pictures{
+    border-radius:5px;
+}
+
+.wd-tweets-count{
+    color:rgb(110,118,125);
+}
+
+.published-time{
+    color:rgb(110,118,125);
+}
+.wd-topic{
+    color:rgb(110,118,125);
+}
+
+/*--------------- Left column: Nav---------------  */
+.wd-buttons{
+    border-radius: 30px 30px 30px 30px;
+    margin-top:5px;
+}
+
+.left-column-icons{
+    padding-right: 5px;
+}
+
+.list-group-margin{
+    margin-top: 17px;
+
+}
+
+.wd-font-weight-bold{
+    font-weight:bold;
+}
