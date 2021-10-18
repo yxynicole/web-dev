@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A4 Explore Challenge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="explore.css" rel="stylesheet"/>
+</head>
+
+<!--The page is divided into three column from left to right: nav bar, the main content, and "who to follow".  -->
+
+<body class="wd-list-item-bg-color">
+<div class = "row wd-list-item-bg-color">
+    <!-- Left (nav) -->
+    <div class = "col-xxl-2 col-xl-2 col-lg-1 col-md-1  col-sm-1">
+        <ul class="list-group list-group-margin">
+            <li class="list-group-item wd-list-item-bg-color"><i class="fab fa-twitter wd-left-column-icons fa-2x"></i></li>
+            <li class="list-group-item wd-list-item-bg-color"><i class="fas fa-home wd-left-column-icons"></i>Home</li>
+            <li class="list-group-item wd-list-item-bg-color"><i class="fas fa-hashtag wd-left-column-icons"></i>Explore</li>
+            <li class="list-group-item wd-list-item-bg-color"><i class="fas fa-bell wd-left-column-icons"></i>Notifications</li>
+            <li class="list-group-item wd-list-item-bg-color"><i class="fas fa-envelope wd-left-column-icons"></i>Messages</li>
+            <li class="list-group-item wd-list-item-bg-color"><i class="fas fa-bookmark wd-left-column-icons"></i>Bookmarks</li>
+            <li class="list-group-item wd-list-item-bg-color"><i class="fas fa-list wd-left-column-icons"></i>Lists</li>
+            <li class="list-group-item wd-list-item-bg-color"><i class="fas fa-user-alt wd-left-column-icons"></i>Profile</li>
+            <li class="list-group-item wd-list-item-bg-color"><i class="fas fa-ellipsis-h wd-left-column-icons"></i>More</li>
+            <button type="button" class="btn btn-primary form-control wd-buttons">
+                Tweet
+            </button>
+        </ul>
+
+    </div>
+
+    <!-- Center (main content) -->
+    <div class = "col-xxl-6 col-xl-6 col-lg-8 col-md-10 col-sm-11 ">
+        <!-- search bar AND gear -->
+        <div class = "row wd-search-bar-margin">
+            <!-- search bar-->
+            <div class = "col-10">
+                <i class="fas fa-search fa-xs wd-search-icon"></i>
+                <form class="form-inline">
+                        <input class="form-control mr-sm-2 wd-search-bar force-opaque" type="text" placeholder="   Search Twitter" aria-label="Search">
+                </form>
+            </div>
+            <!-- gear -->
+            <div class = "col-2">
+                <i class="fas fa-cog fa-lg wd-gear"></i>
+            </div>
+        </div>
+
+        <!-- nav bar using tabs -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <a class="nav-link" href="#" style="color:#C5C5C5;
+                                                        font-weight: bold;
+                                                        font-size:20px;">For you</a>
+                </div>
+                <div class="col-sm">
+                    <a class="nav-link" href="#" style="color:#C5C5C5;
+                                                        font-weight: bold;
+                                                        font-size:20px;">Trending</a>
+                </div>
+                <div class="col-sm">
+                    <a class="nav-link" href="#" style="color:#C5C5C5;
+                                                        font-weight: bold;
+                                                        font-size:20px;">COVID-19</a>
+                </div>
+                <div class="col-sm">
+                    <a class="nav-link" href="#" style="color:#C5C5C5;
+                                                        font-weight: bold;
+                                                        font-size:20px;">News</a>
+                </div>
+                <div class="col-sm">
+                    <a class="nav-link" href="#" style="color:#C5C5C5;
+                                                        font-weight: bold;
+                                                        font-size:20px;">Sports</a>
+                </div>
+                <div class="col-sm">
+                    <a class="nav-link" href="#" style="color:white;
+                                                        font-weight: bold;
+                                                        font-size:20px;">Entertainment</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- contents -->
+        <div>
+            <img src = "./myUniversity.jpg"  class ="img-fluid">
+            <div id="wd-music-last-night-style">Music - Last night</div>
+            <div id="wd-BTS-title">BTS adn Coldplay release their new song, My Universe &#129680;</div>
+        </div>
+
+        <!-- tweets -->
+        <ul class="list-group list-group-margin">
+            <!-- R Kelly -->
+            <li class="list-group-item wd-list-item-bg-color">
+                <div class ="row">
+                    <div class="col-10 ">
+                        <div class = "wd-topic">Trending in R&B & soul</div>
+                        <div class = "wd-sub-topic">R Kelly </div>
+                        <div style="color:grey">18.2K Tweets</div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="fas fa-ellipsis-h wd-ellipsisIcon" style="float: right;color:rgb(110,118,125)"></div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Chloe Kelly -->
+            <li class="list-group-item wd-list-item-bg-color">
+                <div class ="row">
+                    <div class="col-10 ">
+                        <div class = "wd-topic">Trending in R&B & soul</div>
+                        <div class = "wd-sub-topic">Chloe</div>
+                        <div style="color:grey">Treading with <a href="#" style="text-decoration: none">Halle</a></div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="fas fa-ellipsis-h wd-ellipsisIcon" style="float: right;color:rgb(110,118,125)"></div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- The Times -->
+            <li class="list-group-item wd-list-item-bg-color">
+                <div class ="row">
+                    <div class="col-10">
+                        <img src="./the-times-avatar.png" alt="the-times-logo" class="wd-logos"> <span class = "wd-font-weight-bold">The Times <i class ="fas fa-check-circle check-mark-verified-accounts"></i><span class="published-time"> - September 24 2021</span></span>
+                        <div class ="wd-sub-topic">
+                            Stanley Tucci: 'Food or sex? That's the cruellest question..."
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <img src = "./stanleyTucci.jpg" alt = "stanleyTucci" class="img-fluid wd-tweet-pictures">
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- RIGHT (Who to follow) -->
+    <div class = "col-xxl-4 col-xl-4 col-lg-3 col-md-1 col-md-1">
+        <ul class="list-group list-group-margin">
+            <!--1st row: who to follow -->
+            <li class="list-group-item wd-who-to-follow-title    wd-who-to-follow-item-bg-style "
+                style="border-top-left-radius:30px;
+                       border-top-right-radius:30px;">Who to follow
+            </li>
+            <!--The Babylon Bee-->
+            <li class="list-group-item wd-who-to-follow-item-bg-style">
+                <div class = "row">
+                    <div class ="col-2"><img src="./babylon-bee-avatar.jpeg" class ="img-fluid" style="border-radius: 50%;"></div>
+                    <div class ="col-8">The Babylon Bee <i class ="fas fa-check-circle check-mark-verified-accounts"></i><div class="wd-who-to-follow-item-handle">@TheBabylonBee</div></div>
+                    <div class ="col-2"><button class="btn btn-primary white-button">
+                       Follow</button></div>
+                </div>
+            </li>
+            <!-- Jack Posoblex 	-->
+            <li class="list-group-item wd-who-to-follow-item-bg-style">
+                <div class = "row">
+                    <div class ="col-2"><img src="./jack-p-avatar.jpeg" class ="img-fluid " style="border-radius: 50%;"></div>
+                    <div class ="col-8">Jack Posoblec &#127482;&#127480; <i class ="fas fa-check-circle check-mark-verified-accounts"></i><div class="wd-who-to-follow-item-handle">@JackPosoblec</div></div>
+                    <div class ="col-2"><button class="btn btn-primary white-button">
+                        Follow</button></div>
+                </div>
+            </li>
+
+            <li class="list-group-item wd-who-to-follow-item-bg-style "
+                style="border-bottom-left-radius:30px;
+                       border-bottom-right-radius:30px;">
+                <div class = "row">
+                    <a href="#" style="text-decoration: none;
+                                        color:dodgerblue;
+                                        font-width: normal;">Show more</a>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

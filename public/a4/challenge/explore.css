@@ -1,0 +1,119 @@
+.wd-list-item-bg-color{
+    background-color: black;
+    color:white;
+}
+/* ---------Center (main content) ----------*/
+.wd-search-icon{
+    position:relative;
+    top:30px;
+    left:10px;
+    color:#C5C5C5;
+}
+
+.wd-gear{
+    color-background:white;
+    position:relative;
+    top:30px;
+}
+
+.wd-search-bar-margin{
+    margin-bottom: 10px;
+}
+.wd-search-bar{
+    border-radius:20px;
+    background-color:#484848;
+    border-color:#696969;
+    color:#C5C5C5;
+}
+/* placeholder color */
+input::placeholder {
+    color: #C5C5C5;
+
+}
+/* placeholder color */
+.force-opaque::placeholder {
+    color: #C5C5C5;
+}
+
+
+
+/*tweets*/
+#wd-music-last-night-style{
+    padding-left: 16px;
+}
+
+#wd-BTS-title{
+    padding-left: 16px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.wd-topic{
+    color:rgb(110,118,125);
+}
+
+.wd-sub-topic{
+    font-weight:bold;
+    font-size:20px;
+}
+
+.check-mark-verified-accounts {
+    padding-left: 5px;
+}
+
+.published-time{
+    font-weight: normal;
+    color:rgb(110,118,125);
+}
+
+.wd-logos{
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+}
+
+.wd-tweet-pictures{
+    width: 100px;
+    height: 100px;
+    margin-left: 16px;
+    float: right;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/*------------ Left column: nav bar --------------- */
+.wd-buttons{
+    border-radius: 30px 30px 30px 30px;
+    margin-top:5px;
+}
+
+.wd-left-column-icons{
+    padding-right: 10px;
+}
+
+.list-group-margin{
+    margin-top: 17px;
+}
+
+.wd-who-to-follow-title{
+    font-weight: bold;
+    font-size:20px;
+}
+
+/*-----------right column: who to follow ------------*/
+.wd-who-to-follow-item-bg-style{
+    background-color: #484848;
+    color:white;
+    font-weight: bold;
+
+}
+
+.white-button{
+    background-color: white;
+    color:black;
+    border-radius: 30px 30px 30px 30px;
+    margin-right:30px;
+}
+
+.wd-who-to-follow-item-handle{
+    color:grey;
+}
