@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import './vendors/bootstrap/css/bootstrap.min.css';
+import './vendors/fontawesome/css/all.min.css';
 import './App.css';
+import HelloWorld from "../src/components/a6/HelloWorld";
+import BuildIndex from "../src/components/a6/Build/index.js";
+import PracticeIndex from "../src/components/a6/Practice/index.js";
+import {BrowserRouter,Route} from "react-router-dom";
+import Practice from "../src/components/a6/Practice/index.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to Web Dev!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+          <BrowserRouter>
+              <div className="container">
+                  <Route path = "/a6/HelloWorld.js" exact={true}>
+                      <HelloWorld/>
+                  </Route>
+                  <Route path = {["/","/a6/Practice/index.js"]} exact={true}>
+                      <PracticeIndex/>
+                  </Route>
+                  <Route path = "/a6/Build/index.js" exact={true}>
+                      <BuildIndex/>
+                  </Route>
+              </div>
+
+          </BrowserRouter>
+
+
+      </>
+
   );
 }
 
