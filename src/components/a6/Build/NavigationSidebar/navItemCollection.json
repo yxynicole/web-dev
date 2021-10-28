@@ -1,0 +1,10 @@
+[
+  {"text" : "", "iconClass" :"fab fa-twitter", "link" : " "},
+  {"text" : "Home", "iconClass" : "fas fa-home", "link" : "../HomeScreen/homeScreen.html "},
+  {"text" : "Explore", "iconClass" : "fas fa-hashtag", "link" :"../ExploreScreen/explore.html "},
+  {"text" : "Notifications", "iconClass" : "fas fa-bell", "link" :" "},
+  {"text" : "Messages", "iconClass" : "fas fa-envelope", "link" :" "},
+  {"text" : "Bookmarks", "iconClass" : "fas fa-list", "link" :" "},
+  {"text" : "Profile", "iconClass" : "fas fa-user-alt", "link" :" "},
+  {"text" : "More", "iconClass" : "fas fa-ellipsis-h", "link" :" "}
+]
