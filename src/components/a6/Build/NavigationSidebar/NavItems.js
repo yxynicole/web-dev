@@ -1,14 +1,24 @@
-// import React from "react";
-//
-// const NavItems = (props) => {
-//     return (
-//             <li className="list-group-item wd-list-item-bg-color" { props.active === props.item.text ? "active" : "" }>
-//                 {console.log(props)}
-//                 <i className = {props.item.className} "left-column-icons">
-//                 </i>
-//                 <a href={props.item.link} style="color:white;
-//                                                  text-decoration:none"> {props.item.text}</a>
-//             </li>
-//     );
-// }
-// export default NavItems;
+import React from "react";
+const navItemBgColor ={
+    backgroundColor: "black",
+    color : "white",
+};
+const navIconsPadding={
+    paddingLeft: "5px",
+    paddingRight : "10px",
+};
+
+const navLinkStyle ={
+    color: "white",
+    textDecoration:"none",
+};
+const NavItems = (props) => {
+    return (
+        <li className={"list-group-item" + (props.isActive ? " active":"")} style = {navItemBgColor}>
+            <i className = {props.item.iconClass} style = {navIconsPadding}></i>
+                <a href={props.item.link} style = {navLinkStyle}>{props.item.text}</a>
+
+        </li>
+    );
+}
+export default NavItems;

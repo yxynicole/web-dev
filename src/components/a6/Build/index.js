@@ -4,7 +4,7 @@ import NavigationSidebar from "./NavigationSidebar";
 
 export const Nav = () =>{
     return (
-        <NavigationSidebar active ="Home"/>
+        <NavigationSidebar activeText="Home"/>
     )
 }
 
