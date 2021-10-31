@@ -4,8 +4,8 @@ import './App.css';
 import HelloWorld from "../src/components/a6/HelloWorld";
 import BuildIndex from "../src/components/a6/Build/index.js";
 import PracticeIndex from "../src/components/a6/Practice/index.js";
+import TwitterIndex from "../src/components/a6/twitter/index.js"
 import {BrowserRouter,Route} from "react-router-dom";
-import Practice from "../src/components/a6/Practice/index.js";
 
 function App() {
   return (
@@ -21,11 +21,11 @@ function App() {
                   <Route path = "/a6/Build/index.js" exact={true}>
                       <BuildIndex/>
                   </Route>
+                  <Route path = "/a6/twitter/index.js"  exact={true}>
+                      <TwitterIndex/>
+                  </Route>
               </div>
-
           </BrowserRouter>
-
-
       </>
 
   );
