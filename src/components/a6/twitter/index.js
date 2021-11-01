@@ -1,5 +1,5 @@
 import React from "react";
-import ExploreScreen from "../Build/ExploreScreen/ExploreScreen";
+import ExploreScreen from "./ExploreScreen/ExploreScreen";
 import {BrowserRouter,Route} from "react-router-dom";
 import HomeScreen from "./HomeScreen/HomeScreen";
 
@@ -12,7 +12,7 @@ function twitter() {
                         <ExploreScreen />
                     </Route>
                     <Route path = {["/","./HomeScreen/HomeScreen"]} exact={true}>
-                        <HomeScreen/>
+                        <HomeScreen />
                     </Route>
                 </div>
             </BrowserRouter>

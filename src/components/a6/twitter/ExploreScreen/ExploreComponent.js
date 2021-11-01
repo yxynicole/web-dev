@@ -26,6 +26,7 @@ const gearIcon = {
 
 const navTabsMargin = {
     marginBottom: "10px",
+    borderBottomColor:"black"
 }
 
 const listItemBgColor = {

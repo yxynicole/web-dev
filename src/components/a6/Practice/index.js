@@ -4,7 +4,9 @@ import Classes from "./Classes";
 import Styles from './Styles/index.js'
 import ConditionalOutput from "./ConditionalOutput";
 import Todo from "./Todo/TodoList";
-
+import HelloWorld from "../HelloWorld";
+import BuildIndex from "../Build/index"
+import ExploreScreen from "../twitter/ExploreScreen/ExploreScreen";
 export const Practice =() =>{
     return(
         <div>
@@ -21,12 +23,22 @@ const PracticeIndex = () => {
     return (
         <>
             <h1> Hello World! from practice</h1>
-            <Link to={"/a6/HelloWorld.js"}>
+            <Link to={"/a6/hello"}>
                 Hello
-            </Link>|
-            <Link to={"/a6/Build/index.js"}>
+            </Link> |
+
+            <Link to={"/a6/build"}>
                 Build
+            </Link> |
+
+            <Link to = {"/a6/twitter/explore"}>
+                Twitter-Explore
+            </Link> |
+
+            <Link to = {"/a6/twitter/home"}>
+                Twitter-Home
             </Link>
+
             <Practice/>
         </>
     )

@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
 const navItemBgColor ={
     backgroundColor: "black",
     color : "white",
@@ -15,11 +17,16 @@ const navLinkStyle ={
 
 const NavItems = (props) => {
     return (
-        <li className={"list-group-item" + (props.isActive ? " active":"")} style = {navItemBgColor}>
-            <i className = {props.item.iconClass} style = {navIconsPadding}></i>
-                <a href={props.item.link} style = {navLinkStyle}>{props.item.text}</a>
+        <>
+            <Link to={'/a6/twitter/' + props.item.text}>
+                <li className={"list-group-item" + (props.isActive ? " active":"")} style = {navItemBgColor}>
+                    <i className = {props.item.iconClass} style = {navIconsPadding} />
+                    {props.item.text}
+                    {/*<a href={props.item.link} style = {navLinkStyle}>{props.item.text}</a>*/}
+                </li>
+            </Link>
+        </>
 
-        </li>
     )
 }
 export default NavItems;
