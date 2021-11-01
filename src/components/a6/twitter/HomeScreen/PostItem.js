@@ -120,33 +120,33 @@ const Row4Item = (prop) => {
             <div className="row">
                 <div className="col">
                     <div>
-                        <i className={prop.post.commentIcon} style={iconColor}>
+                        <i className={prop.post.commentIcon} style={iconColor}></i>
                             <span style= {distanceBtwIconAndCount}>{prop.post.commentCount}</span>
-                        </i>
+
                     </div>
                 </div>
 
                 <div className="col">
                     <div>
-                        <i className={prop.post.retweetIcon} style = {iconColor}>
+                        <i className={prop.post.retweetIcon} style = {iconColor}></i>
                             <span style= {distanceBtwIconAndCount} >{prop.post.retweetCount}</span>
-                        </i>
+
                     </div>
                 </div>
 
                 <div className="col">
                     <div>
-                        <i className={prop.post.heartIcon} style = {iconColor}>
+                        <i className={prop.post.heartIcon} style = {iconColor}></i>
                             <span style= {distanceBtwIconAndCount}>{prop.post.heartCount}</span>
-                        </i>
+
                     </div>
                 </div>
 
                 <div className="col">
                     <div>
-                        <i className={prop.post.shareIcon } style={iconColor}>
+                        <i className={prop.post.shareIcon } style={iconColor}></i>
                             <span style= {distanceBtwIconAndCount}/>
-                        </i>
+
                     </div>
                 </div>
             </div>
