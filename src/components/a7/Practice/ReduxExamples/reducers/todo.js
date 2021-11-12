@@ -23,8 +23,16 @@ const todos = (state=data, action) => {
                 }
 
             ]
+
         case 'delete-todo':
             return state.filter(todo => todo !== action.todo);
+
+        case 'update-todo':
+            const newTodos = state.map(todo => {
+                const newTodo = todo._id === action.todo._id ? action.todo : todo;
+                return newTodo;
+            });
+            return newTodos;
 
         default:
             return state;
