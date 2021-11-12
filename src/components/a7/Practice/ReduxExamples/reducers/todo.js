@@ -13,8 +13,19 @@ const data = [
     },
 ];
 
-const todos = () => {
-    return data;
+const todos = (state=data, action) => {
+    switch (action.type){
+        case 'create-todo':
+            return[
+                ...state,
+                {
+                    do:action.todo
+                }
+
+            ]
+        default:
+            return state;
+    }
 }
 
 export default todos;
