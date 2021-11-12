@@ -4,9 +4,15 @@ const initialState = {
     tweets: posts
 }
 
-const tweets = (state = initialState, action) => {
+const tweetsReducer = (state = initialState, action) => {
 
     switch (action.type) {
+        case 'delete-tweet':
+            return ({
+                tweets: state.tweets.filter(tweet => tweet._id !== action.tweet._id)
+            })
+            break;
+
         case 'create-tweet':
             const tweet = {
                 _id: (new Date()).getTime() + '',
@@ -35,4 +41,4 @@ const tweets = (state = initialState, action) => {
             return(state);
     }
 };
-export default tweets;
+export default tweetsReducer;
