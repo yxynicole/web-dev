@@ -1,10 +1,20 @@
 import React from "react";
+import HelloReduxExampleComponent from "./HelloReduxExampleComponent";
+import hello from "../reducers/hello";
+import {createStore} from "redux";
+import {Provider} from "react-redux";
 
-const ReduxExamples = () =>{
+const store = createStore(hello);
+
+const ReduxExamples = () => {
     return(
-        <div>
-            <h2>Redux Examples</h2>
-        </div>
+        <Provider store={store}>
+            <div>
+                <h2>Redux Examples</h2>
+                <HelloReduxExampleComponent/>
+            </div>
+        </Provider>
     );
 };
 export default ReduxExamples;
+
