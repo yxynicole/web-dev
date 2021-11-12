@@ -19,6 +19,14 @@ const Todos = () => {
         };
         dispatch(action);
     }
+
+    const deleteTodoClickHandler = (todo) =>{
+        const action = {
+            type:'delete-todo',
+            todo
+        };
+        dispatch(action);
+    }
     return(
         <>
             <h3>Todos</h3>
@@ -33,12 +41,18 @@ const Todos = () => {
                             className="btn btn-primary">
                         Create New Todo
                     </button>
+
                 </li>
 
                 {
                     todos.map(todo =>
                                   <li className="list-group-item">
                                       {todo.do}
+                                      <button onClick={() =>
+                                          deleteTodoClickHandler(todo)}
+                                              className="btn btn-danger float-end">
+                                          Delete
+                                      </button>
                                   </li>
                     )
                 }

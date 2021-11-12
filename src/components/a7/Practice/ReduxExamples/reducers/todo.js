@@ -23,6 +23,9 @@ const todos = (state=data, action) => {
                 }
 
             ]
+        case 'delete-todo':
+            return state.filter(todo => todo !== action.todo);
+
         default:
             return state;
     }
