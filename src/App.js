@@ -8,27 +8,36 @@ import HomeScreen from "./components/a7/twitter/HomeScreen/HomeScreen";
 import ExploreScreen from "./components/a7/twitter/ExploreScreen/ExploreScreen";
 import Practice from "./components/a7/Practice";
 import Build from "./components/a7/Build";
+import tweets from "./reducers/tweetsReducer";
+import {combineReducers, createStore} from "redux";
+import {Provider} from "react-redux";
+
+const reducer = combineReducers({tweets: tweets})
+const store = createStore(reducer);
 
 function App() {
   return (
-      <>
-          <BrowserRouter>
-              <div className="container">
-                  <Route path={["/a7", "/a7/practice"]} exact={true}>
-                      <Practice/>
-                  </Route>
-                  <Route path="/a7/twitter">
-                      <Build/>
-                  </Route>
-                  <Route path = "/a7/twitter/home" exact={true}>
-                      <HomeScreen/>
-                  </Route>
-                  <Route path = "/a7/twitter/explore"  exact={true}>
-                      <ExploreScreen/>
-                  </Route>
-              </div>
-          </BrowserRouter>
-      </>
+
+          <Provider store = {store}>
+              <BrowserRouter>
+                  <div className="container">
+                      <Route path={["/", "/a7", "/a7/practice"]} exact={true}>
+                          <Practice/>
+                      </Route>
+                      <Route path="/a7/twitter">
+                          <Build/>
+                      </Route>
+                      {/*<Route path = "/a7/twitter/home" exact={true}>*/}
+                      {/*    <HomeScreen/>*/}
+                      {/*</Route>*/}
+                      {/*<Route path = "/a7/twitter/explore"  exact={true}>*/}
+                      {/*    <ExploreScreen/>*/}
+                      {/*</Route>*/}
+                  </div>
+              </BrowserRouter>
+          </Provider>
+
+
 
   );
 }
