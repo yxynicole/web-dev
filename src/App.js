@@ -9,10 +9,14 @@ import ExploreScreen from "./components/a7/twitter/ExploreScreen/ExploreScreen";
 import Practice from "./components/a7/Practice";
 import Build from "./components/a7/Build";
 import tweets from "./reducers/tweetsReducer";
+import who from "./reducers/who"
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
+import hello from "./components/a7/Practice/ReduxExamples/reducers/hello";
+import todos from "./components/a7/Practice/ReduxExamples/reducers/todo";
 
-const reducer = combineReducers({tweets: tweets})
+
+const reducer = combineReducers({tweets, who})
 const store = createStore(reducer);
 
 function App() {
