@@ -2,6 +2,7 @@ import React from "react";
 import NavigationSidebar from "../../twitter/NavigationSidebar";
 import PostSummaryList from "../../twitter/PostSummaryList";
 import TweetList from "../TweetList";
+import WhatsHappening from "../WhatsHappening/index";
 
 const HomeScreen = () =>{
     return (
@@ -12,6 +13,7 @@ const HomeScreen = () =>{
             </div>
 
             <div className="col-10 col-md-10 col-lg-7 col-xl-6" style={{"position": "relative"}}>
+                <WhatsHappening/>
                 <TweetList/>
             </div>
 
