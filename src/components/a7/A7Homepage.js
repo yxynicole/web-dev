@@ -1,14 +1,12 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import ReduxExamples from "./ReduxExamples/components";
 
-
-const Practice = () =>{
+const A7Homepage = () =>{
     return (
         <>
-            <h1>A7 Practice</h1>
+            <h1>A7 Homepage</h1>
             <Link to={"/"}>
-               Homepage
+                Homepage
             </Link>____
             <Link to={"/a7/twitter/home"}>
                 A6 HomeScreen
@@ -26,10 +24,10 @@ const Practice = () =>{
                 A7 Build____
             </Link>
 
-            <ReduxExamples/>
+            <Link to={"/a7/profile"}>
+                A7 ProfileScreen____
+            </Link>
         </>
     )
 }
-export default Practice;
-
-
+export default A7Homepage

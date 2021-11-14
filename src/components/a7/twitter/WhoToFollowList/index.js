@@ -1,7 +1,7 @@
 import React from "react";
 // import who from "./who.json";
 import WhoToFollowListItem from "./WhoToFollowListItem.js";
-import {useSelector} from "react-redux";
+import who from "../../../a6/twitter/WhoToFollowList/who.json";
 
 
 const listGroupMargin = {
@@ -15,7 +15,6 @@ const wdFontWeightBold = {
 }
 
 const WhoToFollowList = () =>{
-    const who = useSelector((state) => state);
     return(
         <>
             <ul className="list-group" style = {listGroupMargin}>

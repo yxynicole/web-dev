@@ -5,7 +5,6 @@ import {useDispatch} from "react-redux";
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
     const dispatch = useDispatch();
-
     const tweetClickHandler = () => {
         const action = {
             type: 'create-tweet',
@@ -16,17 +15,9 @@ const WhatsHappening = () => {
 
     return(
         <>
-            <textarea value={whatsHappening}
-                      onChange={(event) =>
-                          setWhatsHappening(event.target.value)}>
-            </textarea>
-
-            <button onClick={tweetClickHandler}>
-                Tweet
-            </button>
-
+            <textarea value={whatsHappening} onChange={e => setWhatsHappening(e.target.value)} />
+            <button onClick={tweetClickHandler}>Tweet</button>
         </>
-
-);
+    );
 }
-export default WhatsHappening;
+export default WhatsHappening

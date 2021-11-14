@@ -7,13 +7,32 @@ const initialState = {
 const tweetsReducer = (state = initialState, action) => {
 
     switch (action.type) {
+        case 'like-tweet':
+            return ({
+                tweets: state.tweets.map(tweet => {
+                    if(tweet._id === action.tweet._id) {
+                        if(tweet.liked === true) {
+                            tweet.liked = false;
+                            tweet.stats.likes--;
+                        } else {
+                            tweet.liked = true;
+                            tweet.stats.likes++;
+                        }
+                        return tweet;
+                    } else {
+                        return tweet;
+                    }
+                })
+            });
+
+
         case 'delete-tweet':
             return ({
                 tweets: state.tweets.filter(tweet => tweet._id !== action.tweet._id)
-            })
-            break;
+            });
 
         case 'create-tweet':
+            console.log(action)
             const tweet = {
                 _id: (new Date()).getTime() + '',
                 "topic": "Web Development",
@@ -21,7 +40,7 @@ const tweetsReducer = (state = initialState, action) => {
                 "verified": false,
                 "handle": "ReactJS",
                 "time": "2h",
-                "tweet":{...action.tweet},
+                "tweet": action.tweet,
                 "avatar-image": "../../../images/react-blue.png",
                 "logo-image": "../../../images/react-blue.png",
                 "stats": {
@@ -32,13 +51,12 @@ const tweetsReducer = (state = initialState, action) => {
             };
             return ({
                 tweets: [
-                    {tweet:action.tweet},
+                    tweet,
                     ...state.tweets
                 ]
             });
-            break;
         default:
-            return(state);
+            return (state);
     }
 };
 export default tweetsReducer;

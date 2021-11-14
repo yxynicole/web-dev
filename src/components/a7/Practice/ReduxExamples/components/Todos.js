@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 
 const Todos = () => {
-    const todos = useSelector(state => state.todos);
+    const todos = useSelector(state => state.todos); //
     //todos = data in todo.js, Array[2]
 
     const [todo, setTodo] = useState({do:"",done:false}) //add done property
@@ -12,7 +12,7 @@ const Todos = () => {
     }
 
     const dispatch =useDispatch();
-    const createTodoClickHandler = () =>{
+    const createTodoClickHandler = (todo) =>{
         const action = {
             type:'create-todo',
             todo                        //payload
@@ -47,7 +47,7 @@ const Todos = () => {
                             value = {todo.do}
                             className = "form-control"/>
 
-                    <button onClick={createTodoClickHandler}
+                    <button onClick={() => createTodoClickHandler(todo)}
                             className="btn btn-primary">
                         Create New Todo
                     </button>
