@@ -1,48 +1,47 @@
 import './vendors/bootstrap/css/bootstrap.min.css';
 import './vendors/fontawesome/css/all.min.css';
-import './App.css';
-// import PracticeIndex from "../src/components/a7/Practice/index.js";
-// import TwitterIndex from "../src/components/a7/twitter/index.js"
-import {BrowserRouter,Route} from "react-router-dom";
-import HomeScreen from "./components/a7/twitter/HomeScreen/HomeScreen";
-import ExploreScreen from "./components/a7/twitter/ExploreScreen/ExploreScreen";
-import Practice from "./components/a7/Practice";
-import Build from "./components/a7/Build";
-import tweets from "./reducers/tweetsReducer";
-import who from "./reducers/who"
-import {combineReducers, createStore} from "redux";
+import React from "react";
+import {BrowserRouter, Link, Route} from "react-router-dom";
+import {createStore,combineReducers} from "redux";
 import {Provider} from "react-redux";
-import hello from "./components/a7/Practice/ReduxExamples/reducers/hello";
-import todos from "./components/a7/Practice/ReduxExamples/reducers/todo";
+import tweetsReducer from  "./reducers/tweetsReducer"
 
+import A7Homepage from "./components/a7/A7Homepage";
+import HomeScreen from "./components/a7/twitter/HomeScreen/HomeScreen"
+import ExploreScreen from "./components/a7/twitter/ExploreScreen/ExploreScreen"
+import Build from "./components/a7/Build/Build";
+import Practice from "./components/a7/Practice/Practice"
+import ProfileScreen from "./components/a7/Build/ProfileScreen/ProfileScreen";
 
-const reducer = combineReducers({tweets, who})
+const reducer = combineReducers({tweetsReducer,})
 const store = createStore(reducer);
 
 function App() {
   return (
-
-          <Provider store = {store}>
-              <BrowserRouter>
-                  <div className="container">
-                      <Route path={["/", "/a7", "/a7/practice"]} exact={true}>
-                          <Practice/>
-                      </Route>
-                      <Route path="/a7/twitter">
-                          <Build/>
-                      </Route>
-                      {/*<Route path = "/a7/twitter/home" exact={true}>*/}
-                      {/*    <HomeScreen/>*/}
-                      {/*</Route>*/}
-                      {/*<Route path = "/a7/twitter/explore"  exact={true}>*/}
-                      {/*    <ExploreScreen/>*/}
-                      {/*</Route>*/}
-                  </div>
-              </BrowserRouter>
-          </Provider>
-
-
-
+      <Provider store={store}>
+        <BrowserRouter>
+            <div className="container">
+                <Route path="/" exact={true}>
+                    <A7Homepage/>
+                </Route>
+                <Route path="/a7/twitter/home">
+                    <HomeScreen/>
+                </Route>
+                <Route path = "/a7/twitter/explore" exact={true}>
+                    <ExploreScreen/>
+                </Route>
+                <Route path ="/a7/practice" exact={true}>
+                    <Practice/>
+                </Route>
+                <Route path = "/a7/build"  exact={true}>
+                    <Build/>
+                </Route>
+                <Route path = "/a7/profile" exact = {true}>
+                    <ProfileScreen/>
+                </Route>
+            </div>
+        </BrowserRouter>
+      </Provider>
   );
 }
 
