@@ -1,9 +1,9 @@
 import React from "react";
 import NavigationSidebar from "../../twitter/NavigationSidebar";
 import PostSummaryList from "../../twitter/PostSummaryList";
-import Main from "./Main"
-
-const HomeScreen = () =>{
+import TweetList from "../TweetList";
+import ProfileWrapper from "./ProfileWrapper";
+const ProfileScreen = () =>{
     return (
         <div className="row mt-2">
 
@@ -12,7 +12,8 @@ const HomeScreen = () =>{
             </div>
 
             <div className="col-10 col-md-10 col-lg-7 col-xl-6" style={{"position": "relative"}}>
-                <Main/>
+                <ProfileWrapper/>
+                <TweetList/>
             </div>
 
             <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
@@ -22,4 +23,4 @@ const HomeScreen = () =>{
         </div>
     )
 }
-export default HomeScreen;
+export default ProfileScreen;

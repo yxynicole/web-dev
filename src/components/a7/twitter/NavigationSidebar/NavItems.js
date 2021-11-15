@@ -22,7 +22,6 @@ const NavItems = (props) => {
                 <li className={"list-group-item" + (props.isActive ? " active":"")} style = {navItemBgColor}>
                     <i className = {props.item.iconClass} style = {navIconsPadding} />
                     {props.item.text}
-                    {/*<a href={props.item.link} style = {navLinkStyle}>{props.item.text}</a>*/}
                 </li>
             </Link>
         </>

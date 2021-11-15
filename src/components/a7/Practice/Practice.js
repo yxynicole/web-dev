@@ -6,24 +6,14 @@ import ReduxExamples from "./ReduxExamples/components";
 const Practice = () =>{
     return (
         <>
-            <h1>A7 Practice</h1>
-            <Link to={"/"}>
-               Homepage
-            </Link>____
-            <Link to={"/a7/twitter/home"}>
-                A6 HomeScreen
-            </Link>____
-
-            <Link to={"/a7/twitter/explore"}>
-                A6 ExploreScreen____
-            </Link>
+            <h1>Practice</h1>
 
             <Link to={"/a7/practice"}>
-                A7 Practice____
+               Practice&nbsp;&nbsp;|
             </Link>
 
-            <Link to={"/a7/build"}>
-                A7 Build____
+            <Link to={"/a7/twitter"}>
+                &nbsp;&nbsp;Build
             </Link>
 
             <ReduxExamples/>
