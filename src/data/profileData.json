@@ -1,7 +1,6 @@
 [
 	{
-		"firstName": "Hedwig",
-		"lastName": "White",
+		"userName": "Hedwig White",
 		"handle": "hedwig",
 		"profilePicture": "./hedwig.jpg",
 		"bannerPicture": "./forest_banner.jpg",

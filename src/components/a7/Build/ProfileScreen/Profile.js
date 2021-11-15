@@ -12,7 +12,7 @@ const Header = (prop) => {
 
             <div className ="col-11 col-md-11 col-lg-1 col-xl-11">
                 <div>
-                    {prop.firstName + " "+prop.lastName}
+                    {prop.userName}
                 </div>
                 <div>
                     {prop.tweetsCount}
@@ -27,16 +27,17 @@ const BasicInfo = (prop) => {
     return (
         <div className="row">
             <div className="col-12">
-                <div>{prop.firstName + " "+prop.lastName}</div>
+                <div>{prop.userName}</div>
                 <div>@{prop.handle}</div>
             </div>
 
             <div className="col-12">{prop.bio}</div>
 
             <div className="col-12">
-                <span className="col-3"><i className="fas fa-map-marker-alt"/>{prop.location}</span>
-                <span className="col-3"><i className="fas fa-circle-notch"/>{prop.dateOfBirth}</span>
-                <span className="col-3"><i className="fas fa-calendar-alt"/>{prop.dateJoined}</span>
+                <span className="col"><i className="fas fa-map-marker-alt"/> {prop.location}</span>
+                <span className="col"><i className="fas fa-link"/> {prop.website}</span>
+                <span className="col"><i className="fas fa-calendar-alt"/>Joined {prop.dateJoined}</span>
+
             </div>
 
             <div className="col-12">

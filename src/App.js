@@ -11,7 +11,6 @@ import Build from "./components/a7/Build/Build";
 import Practice from "./components/a7/Practice/Practice"
 import ProfileScreen from "./components/a7/Build/ProfileScreen/ProfileScreen";
 import ExploreScreen from "./components/a7/twitter/ExploreScreen/ExploreScreen";
-import EditProfile from "./components/a7/Build/ProfileScreen/EditProfile";
 
 const reducer = combineReducers({tweetsReducer, profileReducer})
 const store = createStore(reducer);
