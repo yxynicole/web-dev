@@ -1,0 +1,132 @@
+
+.wd-dark-background{
+    background-color: black;
+    color:white;
+}
+
+.wd-header{
+    color:white;
+    font-weight: bolder;
+    border-style: solid;
+    border-width:thin;
+    border-color: #3B3B3B;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.wd-avatar-image {
+    padding-top: 5px;
+    padding-left: 20px;
+    border-radius: 50%;
+
+}
+
+.wd-boarder-parallel{
+    border-color:#3B3B3B;
+    border-style: solid;
+    border-width:thin;
+
+
+}
+
+.wd-text-area{
+    padding-top: 5px;
+    background-color: black;
+    border: none;
+    width: 100%;
+    color: white;
+}
+::placeholder {
+    color: lightsteelblue;
+}
+
+.wd-twitter-blue{
+    color:rgb(29,161,242)
+}
+
+.wd-buttons{
+    border-radius: 30px 30px 30px 30px;
+    margin-top:5px;
+    background-color:rgb(29,161,242);
+    color:white;
+    padding-bottom: 5px;
+}
+
+.wd-tweet-button-padding{
+    padding-bottom: 12px;
+}
+
+.wd-border-radius-20px {
+    border-radius: 20px;
+}
+
+/* Navigation Sidebar */
+
+.wd-nav-Twitter-button {
+    margin-top : 5px;
+    border-radius: 30px;
+    background-color:rgb(29,161,242);
+    color:white;
+}
+
+.wd-list-group-margin{
+    margin-top: 17px;
+}
+
+#wd-nav-Icons{
+    padding-left: 5px;
+    padding-right: 3px;
+    text-decoration: none;
+}
+
+#wd-nav-background-color{
+    background-color: black;
+    color : white;
+}
+/* Profile */
+.wd-icon-padding-top{
+    padding-top:20px ;
+    font-weight: bold;
+}
+.wd-username-in-header{
+    padding-top: 5px;
+    color:white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.wd-tweets-count-in-header {
+    padding-top: 3px;
+    color: #AEAEAE;
+    padding-bottom: 5px;
+}
+
+.wd-edit-profile-button{
+    border-radius: 30px 30px 30px 30px;
+    padding-top:5px;
+    background-color:rgb(29,161,242);
+    color:white;
+    padding-bottom: 5px;
+    float: right;
+}
+
+
+.wd-avatar-in-basic-info {
+    border-radius:50%;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+
+}
+
+.wd-grey-text{
+    color: rgb(110, 118, 125);
+}
+
+.wd-row-padding-basic-info{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.wd-border-grey{
+    border-color: rgb(110, 118, 125);
+}

@@ -1,21 +1,19 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
-import EditProfile from "./EditProfile";
-import {Link} from "react-router-dom";
+
 
 const Header = (prop) => {
     return (
-        <div className="row">
-            <div className ="col-1 col-md-1 col-lg-1 col-xl-1">
-                <i className="fas fa-arrow-left"/>
+        <div className="row wd-dark-background">
+            <div className ="col-1 wd-icon-padding-top">
+                <i className="fa fa-arrow-left"/>
             </div>
 
-            <div className ="col-11 col-md-11 col-lg-1 col-xl-11">
-                <div>
+            <div className ="col-11">
+                <div className="wd-username-in-header">
                     {prop.userName}
                 </div>
-                <div>
-                    {prop.tweetsCount}
+                <div className="wd-tweets-count-in-header">
+                    {prop.tweetsCount} Tweets
                 </div>
             </div>
         </div>
@@ -23,27 +21,28 @@ const Header = (prop) => {
 }
 
 
+
+
 const BasicInfo = (prop) => {
     return (
-        <div className="row">
-            <div className="col-12">
-                <div>{prop.userName}</div>
-                <div>@{prop.handle}</div>
+        <div className="row wd-dark-background">
+            <div className="col-12 wd-row-padding-basic-info">
+                <div >{prop.userName}</div>
+                <div className="wd-grey-text">@{prop.handle}</div>
             </div>
 
-            <div className="col-12">{prop.bio}</div>
-
-            <div className="col-12">
-                <span className="col"><i className="fas fa-map-marker-alt"/> {prop.location}</span>
-                <span className="col"><i className="fas fa-link"/> {prop.website}</span>
-                <span className="col"><i className="fas fa-calendar-alt"/>Joined {prop.dateJoined}</span>
-
+            <div className="col-12 wd-row-padding-basic-info">{prop.bio}</div>
+            <div className="col-12 wd-row-padding-basic-info">
+                <span className="col wd-grey-text"><i className="fas fa-map-marker-alt"/> {prop.location}</span>
+                <span className="col wd-grey-text"><i className="fas fa-link"/></span> <a href="#">{prop.website}</a>
+                <span className="col wd-grey-text"><i className="fas fa-calendar-alt"/> Joined February 2015</span>
             </div>
 
-            <div className="col-12">
-                <span className ="col-2">{prop.followingCount + " Following"}</span>
-                <span className ="col-2">{prop.followersCount + " Followers"}</span>
+            <div className="col-12 ">
+                <span className ="col-2">{prop.followingCount}<span className="wd-grey-text"> Following</span></span>
+                <span className ="col-2">{prop.followersCount}<span className="wd-grey-text"> Follower</span></span>
             </div>
+
 
         </div>)
 }
@@ -56,14 +55,14 @@ const Profile = (prop) =>{
         <div className = "container">
             <Header {...userInfo}/>
 
-            <div className="row">
+            <div className="row wd-dark-background">
                 <img src = {require("" + userInfo.bannerPicture).default} alt = "user's banner"   className = "img-fluid"/>
             </div>
 
 
-            <div className="col-12">
-                <img src = {require("" + userInfo.profilePicture).default} alt = "user'avatar"   className = "img-fluid"/>
-                <button className="btn btn-primary" onClick={prop.editProfileHandler} >Edit Profile</button>
+            <div className="col-12 wd-dark-background">
+                    <img src = {require("" + userInfo.profilePicture).default} alt = "user'avatar"   className = "wd-avatar-in-basic-info"/>
+                    <button className="btn wd-edit-profile-button" onClick={prop.editProfileHandler} >Edit Profile</button>
             </div>
 
             <BasicInfo {...userInfo}/>

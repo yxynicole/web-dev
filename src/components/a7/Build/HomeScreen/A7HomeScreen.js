@@ -6,9 +6,9 @@ import WhatsHappening from "../WhatsHappening/index";
 
 const HomeScreen = () =>{
     return (
-        <div className="row mt-2">
+        <div className="row mt-2 wd-dark-background ">
 
-            <div className="col-2 col-md-2 col-lg-1 col-xl-2">
+            <div className="col-2 col-md-2 col-lg-1 col-xl-2 ">
                 <NavigationSidebar active="home"/>
             </div>
 

@@ -1,5 +1,4 @@
 import React from "react";
-import './tweet.css';
 import TweetStats from "./TweetStats";
 import {useDispatch} from "react-redux";
 
@@ -8,7 +7,7 @@ const TweetListItem = ({tweet}) => {
     const deleteTweetClickHandler = () => dispatch({type: 'delete-tweet', tweet});
 
     return(
-        <li className="list-group-item">
+        <li className="list-group-item wd-dark-background">
 
             <table>
                 <tr>

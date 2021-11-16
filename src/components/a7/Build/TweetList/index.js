@@ -8,7 +8,7 @@ const TweetList = () => {
     const tweets = useSelector(selectAllTweets);
 
     return(
-        <ul className="list-group">
+        <ul className="list-group ">
             { tweets.map(tweet => <TweetListItem tweet={tweet}/>) }
         </ul>
     )
