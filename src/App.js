@@ -1,13 +1,12 @@
-import './vendors/bootstrap/css/bootstrap.min.css';
-import './vendors/fontawesome/css/all.min.css';
 import './App.css';
 import HelloWorld from "../src/components/a6/HelloWorld";
 import BuildIndex from "../src/components/a6/Build/index.js";
 import PracticeIndex from "../src/components/a6/Practice/index.js";
-import TwitterIndex from "../src/components/a6/twitter/index.js"
 import {BrowserRouter,Route} from "react-router-dom";
 import HomeScreen from "./components/a6/twitter/HomeScreen/HomeScreen";
 import ExploreScreen from "./components/a6/twitter/ExploreScreen/ExploreScreen";
+import React from "react";
+
 
 function App() {
   return (
