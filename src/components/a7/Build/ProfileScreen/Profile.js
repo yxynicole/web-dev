@@ -34,7 +34,7 @@ const BasicInfo = (prop) => {
             <div className="col-12 wd-row-padding-basic-info">{prop.bio}</div>
             <div className="col-12 wd-row-padding-basic-info">
                 <span className="col wd-grey-text"><i className="fas fa-map-marker-alt"/> {prop.location}</span>
-                <span className="col wd-grey-text"><i className="fas fa-link"/></span> <a href="#">{prop.website}</a>
+                <span className="col wd-grey-text"><i className="fas fa-link"/></span> <a href="./">{prop.website}</a>
                 <span className="col wd-grey-text"><i className="fas fa-calendar-alt"/> Joined February 2015</span>
             </div>
 
