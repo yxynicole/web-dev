@@ -5,12 +5,15 @@ const HelloApiClient = () => {
 
     useEffect(() => {
         fetch('http://localhost:4000/hello')
-            .then(response => response.text())
+            .then((response) => {
+                // console.log(response);
+                response.text();
+            })
             .then(text => setHello(text));
     }, []);
     return (
         <h1>{hello}</h1>
     );
+
 };
 export default HelloApiClient;
-

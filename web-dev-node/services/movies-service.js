@@ -9,5 +9,16 @@ module.exports = (app) =>{
     const getAllMovies = (req, res) => {
         res.json(movies);
     };
+
+    const deleteMovie = (req, res) => {
+        const id = req.params['mid'];
+        movies = movies.filter(m => m._id !== id);
+        res.json(movies);
+    };
+
+    app.delete('/api/movies/:mid', deleteMovie);
     app.get('/api/movies', getAllMovies);
 }
+
+
+
