@@ -20,7 +20,7 @@ app.get('/hello',(req,res)=>{
 
 const movieService = require("./services/movies-service");
 movieService(app);
-
+require('./services/tweeter-service')(app);
 
 app.listen(4000);
 
