@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import fetchAllTweets from "../../../../services/twitterService"
+import {fetchAllTweets} from "../../../../services/twitterService"
 import TweetListItem from "./TweetListItem";
 
 const TweetList = () => {

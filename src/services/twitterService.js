@@ -1,6 +1,6 @@
 const TWEET_API = 'http://localhost:4000/api/tweets';
 
-const fetchAllTweets = (dispatch) =>{
+export const fetchAllTweets = (dispatch) =>{
     fetch(TWEET_API)
         .then(response => response.json())
         .then(tweets =>
@@ -10,4 +10,20 @@ const fetchAllTweets = (dispatch) =>{
                            })
         );
 }
-export default fetchAllTweets;
+
+export const postNewTweet = (dispatch, newTweet) =>{
+    fetch(TWEET_API, {
+        method: 'POST',
+        body: JSON.stringify(newTweet),
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(tweet =>
+                  dispatch({
+                               type: 'create-tweet',
+                               tweet
+                           })
+        );
+}
