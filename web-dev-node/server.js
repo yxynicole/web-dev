@@ -15,5 +15,9 @@ app.get('/hello',(req,res)=>{
    res.send('Hello World! from server')
 });
 
+const movieService = require("./services/movies-service");
+movieService(app);
+
+
 app.listen(4000);
 
