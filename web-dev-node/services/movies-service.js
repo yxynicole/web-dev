@@ -16,6 +16,13 @@ module.exports = (app) =>{
         res.json(movies);
     };
 
+    const createMovie = (req, res) => {
+        const movie = req.body;
+        movies = [...movies, movie];
+        res.json(movies);
+    }
+
+    app.post('/api/movies', createMovie);
     app.delete('/api/movies/:mid', deleteMovie);
     app.get('/api/movies', getAllMovies);
 }
