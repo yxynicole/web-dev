@@ -5,9 +5,15 @@ const initialState ={
     isEdit:false
 }
 
-const profileReducder = (state = initialState, action) => {
-    console.log('profile reducer', action)
+const profileReducer = (state = initialState, action) => {
     switch (action.type){
+        case 'get-current-profile':
+            console.log('profile reducer', action)
+
+            return({
+                userInfo:action.userInfo,
+                isEdit: false
+            })
         case 'edit-profile':
             return {
                 ...state,
@@ -33,4 +39,4 @@ const profileReducder = (state = initialState, action) => {
 
 
 
-export default  profileReducder;
+export default  profileReducer;

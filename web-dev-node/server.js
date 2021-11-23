@@ -24,5 +24,8 @@ movieService(app);
 const tweeterService = require('./services/tweeter-service');
 tweeterService(app);
 
+const profileService = require("./services/profile-service");
+profileService(app);
+
 app.listen(4000);
 

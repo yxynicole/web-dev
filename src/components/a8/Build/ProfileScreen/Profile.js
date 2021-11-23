@@ -50,7 +50,7 @@ const BasicInfo = (prop) => {
 
 const Profile = (prop) =>{
     let userInfo = prop.userInfo;
-
+    console.log("in profile ---: " , userInfo)
     return(
         <div className = "container">
             <Header {...userInfo}/>
