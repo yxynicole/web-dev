@@ -1,10 +1,14 @@
 import React from "react";
 import TweetStats from "./TweetStats";
 import {useDispatch} from "react-redux";
+import {deleteTweet} from "../../../../services/twitterService";
 
 const TweetListItem = ({tweet}) => {
     const dispatch = useDispatch();
-    const deleteTweetClickHandler = () => dispatch({type: 'delete-tweet', tweet});
+    const deleteTweetClickHandler = () => {
+        // dispatch({type: 'delete-tweet', tweet});
+        deleteTweet(dispatch, tweet);
+    }
 
     return(
         <li className="list-group-item wd-dark-background">
@@ -17,10 +21,11 @@ const TweetListItem = ({tweet}) => {
                     </td>
 
                     <td className="ps-3" style={{width: '100%'}}>
-                        <i onClick={deleteTweetClickHandler} className="fa fa-remove fa-pull-right"/>
+
                         <span className="fw-bold">{tweet.userName}</span>
                         {tweet.verified && <i className="ms-1 fas fa-badge-check"/>}
                         <span className="ms-1 text-secondary">@{tweet.handle}</span>
+                        <i onClick={deleteTweetClickHandler} className="fas fa-times wd-delete-tweet-icon-color" />
 
                         <div>
                             {tweet.tweet}

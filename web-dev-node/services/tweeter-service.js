@@ -30,7 +30,13 @@ module.exports = (app) => {
         res.json(newTweet);
     }
 
-    app.post('/api/tweets', postNewTweet);
+    const deleteTweet = (req, res) => {
+        const id = req.params['id'];
+        tweets = tweets.filter(tweet => tweet._id !== id);
+        res.sendStatus(200);
+    }
 
+    app.delete('/api/tweets/:id', deleteTweet);
+    app.post('/api/tweets', postNewTweet);
     app.get('/api/tweets', findAllTweets);
 };

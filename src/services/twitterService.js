@@ -27,3 +27,13 @@ export const postNewTweet = (dispatch, newTweet) =>{
                            })
         );
 }
+
+export const deleteTweet = (dispatch, tweet) =>{
+    fetch(`${TWEET_API}/${tweet._id}`, {
+        method: 'DELETE'
+    }).then(response => dispatch({
+                                     type: 'delete-tweet',
+                                     tweet
+                                 }));
+}
+

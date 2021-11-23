@@ -130,3 +130,8 @@
 .wd-border-grey{
     border-color: rgb(110, 118, 125);
 }
+
+.wd-delete-tweet-icon-color{
+    color:white;
+    float: right;
+}
