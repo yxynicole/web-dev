@@ -1,9 +1,14 @@
 import React from "react";
 import {useDispatch} from "react-redux";
+import {likeTweet} from "../../../../services/twitterService";
+
 
 const TweetStats = ({tweet}) => {
     const dispatch = useDispatch();
-    const likeClickHandler = () => dispatch({type: 'like-tweet', tweet});
+    const likeClickHandler = () =>{
+        // dispatch({type: 'like-tweet', tweet});
+        likeTweet(dispatch, tweet);
+    }
     return (
         <div className="row mt-2">
             <div className="col">
@@ -28,9 +33,6 @@ const TweetStats = ({tweet}) => {
                 }
                     {tweet.stats.likes}
             </div>
-
-
-
 
             <div className="col">
                 <i className="fas fa-external-link-alt me-2"/>

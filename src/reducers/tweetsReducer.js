@@ -11,7 +11,7 @@ const tweetsReducer = (state = initialState, action) => {
             return({
                 tweets: action.tweets
             })
-            break;
+
         case 'like-tweet':
             return ({
                 tweets: state.tweets.map(tweet => {
