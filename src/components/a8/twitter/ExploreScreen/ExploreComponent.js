@@ -52,7 +52,7 @@ const ExploreComponent = () => {
 
             <ul className = {"nav nav-tabs"} style = {navTabsMargin}>
                 <li className = {"nav-item"} >
-                    <a className ={"nav-link active"} href="#">For you</a>
+                    <a className ={"nav-link active"} href="./">For you</a>
                 </li>
                 <li className = {"nav-item"}>
                     <a className ={"nav-link"} style = {listItemBgColor} href="./">Trending</a>
@@ -69,7 +69,7 @@ const ExploreComponent = () => {
             </ul>
 
 
-            <div><img src = {starship}  alt="Starship Mk1 Picture" className = "img-fluid" /></div>
+            <div><img src = {starship}  alt="" className = "img-fluid" /></div>
 
 
             <PostSummaryList />
