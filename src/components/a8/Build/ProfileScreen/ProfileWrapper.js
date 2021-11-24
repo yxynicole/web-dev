@@ -11,16 +11,26 @@ const ProfileWrapper = () => {
 
     useEffect(() => getCurrentProfile(dispatch), [])
 
+    const PROFILE_API = 'http://localhost:4000/api/profile';
+
     const handlers = {
         editProfileHandler: () => {
             dispatch({type: 'edit-profile'});
         },
         saveHandler: (data) => {
-            const action = {
-                type: 'save-profile',
-                data
+            console.log("client side, save Handler", data)
+            const requestOptions = {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
             }
-            dispatch(action);
+
+            fetch(PROFILE_API, requestOptions)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("in fetch: ", data)
+                    dispatch({type:'save-profile', data})
+                })
         },
         closeHandler: () => {
             dispatch({type: 'close-profile'});
