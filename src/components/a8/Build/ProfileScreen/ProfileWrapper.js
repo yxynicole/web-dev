@@ -6,10 +6,9 @@ import {getCurrentProfile} from "../../../../services/profileService";
 
 const ProfileWrapper = () => {
     const profileData = useSelector(reducers => reducers.profileReducer);
-    console.log("profile wrapper ", profileData);
     const dispatch = useDispatch();
 
-    useEffect(() => getCurrentProfile(dispatch))
+    useEffect(() => getCurrentProfile(dispatch), [dispatch])
 
     const PROFILE_API = 'https://thawing-hollows-98347.herokuapp.com/api/profile';
 
@@ -18,7 +17,6 @@ const ProfileWrapper = () => {
             dispatch({type: 'edit-profile'});
         },
         saveHandler: (data) => {
-            console.log("client side, save Handler", data)
             const requestOptions = {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
