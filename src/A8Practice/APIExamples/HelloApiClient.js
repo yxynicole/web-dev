@@ -4,7 +4,7 @@ const HelloApiClient = () => {
     const [hello, setHello] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:4000/hello')
+        fetch('https://thawing-hollows-98347.herokuapp.com/hello')
             .then((response) => {
                 // console.log(response);
                 response.text();

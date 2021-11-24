@@ -1,28 +1,31 @@
 import React, {useEffect, useState} from "react";
 
+const HOST = "https://thawing-hollows-98347.herokuapp.com"
+
 const MovieApiClient = () => {
     const [movies, setMovies] = useState([]);
     const [movie, setMovie] = useState({title: '', rating: 2.5});
 
     useEffect(() => {
-        fetch('http://localhost:4000/api/movies')
+        fetch(HOST + '/api/movies')
             .then(response => response.json())
             .then(movies => setMovies(movies));
     }, []);
 
-    const deleteMovie = (movie) =>{
+    const deleteMovie = (movie) => {
         //console.log(movie);
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {method:'DELETE'})
-             .then(response => response.json())
-             .then(movies => setMovies(movies));
+        fetch(`https://thawing-hollows-98347.herokuapp.com/api/movies/${movie._id}`, {method: 'DELETE'})
+            .then(response => response.json())
+            .then(movies => setMovies(movies));
     }
 
-    const onMovieTitleChange = (event) =>{
+    const onMovieTitleChange = (event) => {
         setMovie({...movie, title: event.target.value});
     }
 
-    const createMovieClickHandler = () =>{
-        fetch('http://localhost:4000/api/movies', {method: 'POST',
+    const createMovieClickHandler = () => {
+        fetch(HOST+'/api/movies', {
+            method: 'POST',
             body: JSON.stringify(movie),
             headers: {
                 'content-type': 'application/json'
@@ -33,7 +36,7 @@ const MovieApiClient = () => {
     }
 
     const saveMovie = () =>
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {
+        fetch(`https://thawing-hollows-98347.herokuapp.com/api/movies/${movie._id}`, {
             method: 'PUT',
             body: JSON.stringify(movie),
             headers: {
@@ -43,7 +46,7 @@ const MovieApiClient = () => {
             .then(response => response.json())
             .then(movies => setMovies(movies));
 
-    return(
+    return (
         <div>
             <h2>Movies</h2>
             <ul className="list-group">

@@ -11,7 +11,7 @@ const ProfileWrapper = () => {
 
     useEffect(() => getCurrentProfile(dispatch), [])
 
-    const PROFILE_API = 'http://localhost:4000/api/profile';
+    const PROFILE_API = 'https://thawing-hollows-98347.herokuapp.com/api/profile';
 
     const handlers = {
         editProfileHandler: () => {
@@ -28,7 +28,6 @@ const ProfileWrapper = () => {
             fetch(PROFILE_API, requestOptions)
                 .then(response => response.json())
                 .then(data => {
-                    console.log("in fetch: ", data)
                     dispatch({type:'save-profile', data})
                 })
         },
