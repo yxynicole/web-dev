@@ -10,7 +10,7 @@ const TweetList = () => {
     useEffect(()=>fetchAllTweets(dispatch), [dispatch])
     return(
         <ul className="list-group ">
-            { tweets.map(tweet => <TweetListItem tweet={tweet}/>) }
+            { tweets.map((tweet, i) => <TweetListItem tweet={tweet} key={i}/>) }
         </ul>
     )
 };

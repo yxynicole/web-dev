@@ -8,8 +8,6 @@ const initialState ={
 const profileReducer = (state = initialState, action) => {
     switch (action.type){
         case 'get-current-profile':
-            console.log('profile reducer', action)
-
             return({
                 userInfo:action.userInfo,
                 isEdit: false
@@ -20,15 +18,13 @@ const profileReducer = (state = initialState, action) => {
                 isEdit: true
             }
         case 'save-profile':
-            let newState = {
+            return {
                 userInfo: {
                     ...state.userInfo,
                     ...action.data,
                 },
-                isEdit:false
+                isEdit: false
             }
-            console.log('sending on save', newState)
-            return newState
         default:
             return {
                 ...state,

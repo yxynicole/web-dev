@@ -10,7 +10,7 @@ const PostSummaryList = () => {
     JSON.stringify(posts)
     return(
         <ul className="list-group" style={listGroupMargin}>
-            {posts.map(p => <PostSummaryItem post = {p}/>)}
+            {posts.map((p, i) => <PostSummaryItem post = {p} key={i}/>)}
         </ul>
     )
 }

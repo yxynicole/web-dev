@@ -8,7 +8,7 @@ const NavigationSidebar = (props) => {
         <>
             <ul className="list-group wd-list-group-margin">
 
-                {navItem.map( e => <NavItems item = {e} isActive={props.activeText === e.text}/>)}
+                {navItem.map( (e, i) => <NavItems item = {e} key={i} isActive={props.activeText === e.text}/>)}
 
                 <button type="button" className="btn form-control wd-nav-Twitter-button " >
                     Tweet

@@ -6,14 +6,14 @@ import {deleteTweet} from "../../../../services/twitterService";
 const TweetListItem = ({tweet}) => {
     const dispatch = useDispatch();
     const deleteTweetClickHandler = () => {
-        // dispatch({type: 'delete-tweet', tweet});
         deleteTweet(dispatch, tweet);
     }
 
-    return(
+    return (
         <li className="list-group-item wd-dark-background">
 
             <table>
+                <tbody>
                 <tr>
                     <td className="align-text-top">
                         <img alt="" className="rounded-circle wd-avatar-image"
@@ -25,7 +25,8 @@ const TweetListItem = ({tweet}) => {
                         <span className="fw-bold">{tweet.userName}</span>
                         {tweet.verified && <i className="ms-1 fas fa-badge-check"/>}
                         <span className="ms-1 text-secondary">@{tweet.handle}</span>
-                        <i onClick={deleteTweetClickHandler} className="fas fa-times wd-delete-tweet-icon-color" />
+                        <i onClick={deleteTweetClickHandler}
+                           className="fas fa-times wd-delete-tweet-icon-color"/>
 
                         <div>
                             {tweet.tweet}
@@ -51,6 +52,7 @@ const TweetListItem = ({tweet}) => {
                         <TweetStats tweet={tweet}/>
                     </td>
                 </tr>
+                </tbody>
             </table>
         </li>
     );
