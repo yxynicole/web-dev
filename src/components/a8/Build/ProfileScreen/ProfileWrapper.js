@@ -9,7 +9,7 @@ const ProfileWrapper = () => {
     console.log("profile wrapper ", profileData);
     const dispatch = useDispatch();
 
-    useEffect(() => getCurrentProfile(dispatch), [])
+    useEffect(() => getCurrentProfile(dispatch))
 
     const PROFILE_API = 'https://thawing-hollows-98347.herokuapp.com/api/profile';
 
