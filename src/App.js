@@ -9,6 +9,8 @@ import Build from "./components/a8/Build/Build";
 import Practice from "./components/a8/Practice/Practice"
 import ProfileScreen from "./components/a8/Build/ProfileScreen/ProfileScreen";
 import ExploreScreen from "./components/a8/twitter/ExploreScreen/ExploreScreen";
+import A9 from "./a9/index";
+import {Link} from "react-router-dom";
 
 const reducer = combineReducers({tweetsReducer, profileReducer,whoReducer})
 const store = createStore(reducer);
@@ -18,6 +20,9 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
             <div className="container">
+                <Link to="/a8/practice">A8</Link> |
+                <Link to="/a9/practice">A9</Link>
+
                 <Route path={["/","/a8", "/a8/practice"]} exact={true}>
                     <Practice/>
                 </Route>
@@ -31,6 +36,10 @@ function App() {
 
                 <Route path={["/a8/twitter/Profile"]} exact={true}>
                     <ProfileScreen/>
+                </Route>
+
+                <Route path="/a9">
+                    <A9/>
                 </Route>
 
             </div>
