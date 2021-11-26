@@ -2,15 +2,15 @@ import React from "react";
 import navItem from "./navItemCollection.json";
 import NavItems from "./NavItems.js";
 
-
 const NavigationSidebar = (props) => {
-    return(
+    return (
         <>
             <ul className="list-group wd-list-group-margin">
 
-                {navItem.map( (e, i) => <NavItems item = {e} key={i} isActive={props.activeText === e.text}/>)}
+                {navItem.map(
+                    (e, i) => <NavItems item={e} key={i} isActive={props.activeText === e.text}/>)}
 
-                <button type="button" className="btn form-control wd-nav-Twitter-button " >
+                <button type="button" className="btn form-control wd-nav-Twitter-button ">
                     Tweet
                 </button>
             </ul>

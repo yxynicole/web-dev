@@ -3,14 +3,13 @@ import posts from "./posts.json";
 import PostSummaryItem from "./PostSummaryItem"
 
 const listGroupMargin = {
-    marginTop : "17px"
+    marginTop: "17px"
 }
 
 const PostSummaryList = () => {
-    JSON.stringify(posts)
-    return(
+    return (
         <ul className="list-group" style={listGroupMargin}>
-            {posts.map((p, i) => <PostSummaryItem post = {p} key={i}/>)}
+            {posts.map((p, i) => <PostSummaryItem post={p} key={i}/>)}
         </ul>
     )
 }

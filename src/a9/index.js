@@ -4,7 +4,7 @@ import Practice from "./Practice/Practice";
 import Build from "./Build/Build";
 
 const A9 = () => {
-    return(
+    return (
         <div>
             <Route path="/a9/practice" exact={true}>
                 <Practice/>

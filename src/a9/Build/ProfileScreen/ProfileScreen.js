@@ -1,10 +1,11 @@
 import React from "react";
-import NavigationSidebar from "../../twitter/NavigationSidebar";
-import PostSummaryList from "../../twitter/PostSummaryList";
+import NavigationSidebar from "../NavigationSidebar";
+import PostSummaryList from "../PostSummaryList";
 import TweetList from "../TweetList";
 import ProfileWrapper from "./ProfileWrapper";
 import MainNav from "./MainNav";
-const ProfileScreen = () =>{
+
+const ProfileScreen = () => {
     return (
         <div className="row mt-2">
 
@@ -12,7 +13,8 @@ const ProfileScreen = () =>{
                 <NavigationSidebar active="home"/>
             </div>
 
-            <div className="col-10 col-md-10 col-lg-7 col-xl-6 wd-dark-background" style={{"position": "relative"}}>
+            <div className="col-10 col-md-10 col-lg-7 col-xl-6 wd-dark-background"
+                 style={{"position": "relative"}}>
                 <ProfileWrapper/>
                 <MainNav/>
                 <TweetList/>

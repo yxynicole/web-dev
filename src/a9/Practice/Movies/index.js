@@ -14,8 +14,6 @@ const Movies = () => {
 
     }, [setMovies]);
 
-
-
     const deleteMovie = (movie) => {
         service.deleteMovie(movie._id)
             .then(() => setMovies(movies.filter(m => m !== movie)));
@@ -34,14 +32,14 @@ const Movies = () => {
             );
     }
 
-    const findMovieById = (movie) =>{
+    const findMovieById = (movie) => {
         service.findMovieById(movie._id)
             .then(movie => setMovie(movie));
     }
 
     // save text input changes
     // in the local movie state variable
-    const updateMovie = (event) =>{
+    const updateMovie = (event) => {
         setMovie({...movie, title: event.target.value});
     }
 
@@ -85,7 +83,7 @@ const Movies = () => {
                                    <li key={movie._id}
                                        className="list-group-item">
                                        <button
-                                           onClick={() => findMovieById (movie)}
+                                           onClick={() => findMovieById(movie)}
                                            className="btn btn-warning float-end ms-2">
                                            Edit
                                        </button>

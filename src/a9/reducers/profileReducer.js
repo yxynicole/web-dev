@@ -1,15 +1,15 @@
 import profileData from "../data/profileData.json";
 
-const initialState ={
-    userInfo:profileData[0],
-    isEdit:false
+const initialState = {
+    userInfo: profileData[0],
+    isEdit: false
 }
 
 const profileReducer = (state = initialState, action) => {
-    switch (action.type){
+    switch (action.type) {
         case 'get-current-profile':
-            return({
-                userInfo:action.userInfo,
+            return ({
+                userInfo: action.userInfo,
                 isEdit: false
             })
         case 'edit-profile':
@@ -33,6 +33,4 @@ const profileReducer = (state = initialState, action) => {
     }
 };
 
-
-
-export default  profileReducer;
+export default profileReducer;

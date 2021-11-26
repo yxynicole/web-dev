@@ -4,13 +4,13 @@ import ReduxExamples from "./ReduxExamples/components";
 import APIExamples from "../../A8Practice/APIExamples/index.js"
 import Movies from "./Movies/index"
 
-const Practice = () =>{
+const Practice = () => {
     return (
         <>
             <h1>Practice</h1>
 
             <Link to={"/a9/practice"}>
-               Practice&nbsp;&nbsp;|
+                Practice&nbsp;&nbsp;|
             </Link>
 
             <Link to={"/a9/twitter"}>

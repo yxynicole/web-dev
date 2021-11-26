@@ -4,7 +4,7 @@ import PostSummaryList from "../PostSummaryList/index";
 import TweetList from "../TweetList";
 import WhatsHappening from "../WhatsHappening/index";
 
-const HomeScreen = () =>{
+const HomeScreen = () => {
     return (
         <div className="row mt-2 wd-dark-background ">
 

@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react";
+import BACKEND_URL from "../../config";
 
 const HelloApiClient = () => {
     const [hello, setHello] = useState('');
 
     useEffect(() => {
-        fetch('https://thawing-hollows-98347.herokuapp.com/hello')
+        fetch(BACKEND_URL+'/hello')
             .then((response) => {
                 // console.log(response);
                 response.text();

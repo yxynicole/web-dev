@@ -7,10 +7,10 @@ const TweetList = () => {
     const selectAllTweets = (reducers) => reducers.tweetsReducer.tweets;
     const tweets = useSelector(selectAllTweets);
     const dispatch = useDispatch();
-    useEffect(()=>fetchAllTweets(dispatch), [dispatch])
-    return(
+    useEffect(() => fetchAllTweets(dispatch), [dispatch])
+    return (
         <ul className="list-group ">
-            { tweets.map((tweet, i) => <TweetListItem tweet={tweet} key={i}/>) }
+            {tweets.map((tweet, i) => <TweetListItem tweet={tweet} key={i}/>)}
         </ul>
     )
 };

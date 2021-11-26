@@ -1,10 +1,12 @@
-const URL = 'http://localhost:4000/rest/movies';       // declare URL to service
+import BACKEND_URL from "../../../config";
+
+const URL = BACKEND_URL + '/rest/movies';       // declare URL to service
 
 export const findAllMovies = () => fetch(URL).then(response => response.json());
 
 export const deleteMovie = (id) => fetch(`${URL}/${id}`, {method: 'DELETE',});
 
-export const createMovie = (movie) =>{
+export const createMovie = (movie) => {
     return fetch(URL, {
         method: 'POST',
         body: JSON.stringify(movie),
@@ -15,14 +17,14 @@ export const createMovie = (movie) =>{
 }
 
 // implement function to retrieve movie by its ID
-export const findMovieById = (id) =>{
+export const findMovieById = (id) => {
     // send HTTP GET to URL including movie's ID
     // parse movie from response's body
     return fetch(`${URL}/${id}`)
         .then(response => response.json());
 }
 
-export const updateMovie = (movie) =>{
+export const updateMovie = (movie) => {
     // send new movie
     // include movie's ID in the URL
     return fetch(`${URL}/${movie._id}`, {

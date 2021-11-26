@@ -1,4 +1,6 @@
-const PROFILE_API = 'https://thawing-hollows-98347.herokuapp.com/api/profile';
+import BACKEND_URL from "../config";
+
+const PROFILE_API = BACKEND_URL + '/api/profile';
 
 export const getCurrentProfile = (dispatch) => {
     fetch(PROFILE_API)

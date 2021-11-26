@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-
-const HOST = "https://thawing-hollows-98347.herokuapp.com"
+import BACKEND_URL from "../../config";
+const HOST = BACKEND_URL
 
 const MovieApiClient = () => {
     const [movies, setMovies] = useState([]);
@@ -14,7 +14,7 @@ const MovieApiClient = () => {
 
     const deleteMovie = (movie) => {
         //console.log(movie);
-        fetch(`https://thawing-hollows-98347.herokuapp.com/api/movies/${movie._id}`, {method: 'DELETE'})
+        fetch(`${HOST}/api/movies/${movie._id}`, {method: 'DELETE'})
             .then(response => response.json())
             .then(movies => setMovies(movies));
     }
@@ -36,7 +36,7 @@ const MovieApiClient = () => {
     }
 
     const saveMovie = () =>
-        fetch(`https://thawing-hollows-98347.herokuapp.com/api/movies/${movie._id}`, {
+        fetch(`${HOST}/api/movies/${movie._id}`, {
             method: 'PUT',
             body: JSON.stringify(movie),
             headers: {
