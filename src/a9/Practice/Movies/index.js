@@ -13,13 +13,29 @@ const Movies = () => {
 
     }, [setMovies]);
 
-    const deleteMovie = (movie) =>{
+    const deleteMovie = (movie) => {
         service.deleteMovie(movie._id)
             .then(() => setMovies(movies.filter(m => m !== movie)));
     }
 
+    const createMovie = () => {
+        service.createMovie({title: 'New Movie'})
+            .then(actualMovie => {
+                      setMovies([
+                                    actualMovie, ...movies
+                                ])
+                  }
+            );
+    }
+
     return (
         <div>
+            <button
+                onClick={createMovie}
+                className="btn btn-success float-end">
+                Create
+            </button>
+
             <h2>Movies</h2>
             <ul className="list-group">
                 {
