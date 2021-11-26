@@ -10,7 +10,7 @@ const ProfileWrapper = () => {
 
     useEffect(() => getCurrentProfile(dispatch), [dispatch])
 
-    const PROFILE_API = 'https://thawing-hollows-98347.herokuapp.com/api/profile';
+    const PROFILE_API = 'http://localhost:3000/api/profile';
 
     const handlers = {
         editProfileHandler: () => {

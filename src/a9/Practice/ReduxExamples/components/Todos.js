@@ -7,7 +7,7 @@ const Todos = () => {
 
     const [todo, setTodo] = useState({do:"",done:false}) //add done property
 
-    const todoChangeHandler = (event) =>{
+    const todoChangeHandler = event =>{
         setTodo(event.target.value);
     }
 
@@ -55,8 +55,8 @@ const Todos = () => {
                 </li>
 
                 {
-                    todos.map(todo =>
-                                  <li className="list-group-item">
+                    todos.map((todo, index) =>
+                                  <li className="list-group-item" key={index}>
                                       <input checked={todo.done}
                                       onChange = {event => updateTodoClickHandler(
                                           {...todo,

@@ -22,8 +22,30 @@ export const findMovieById = (id) =>{
         .then(response => response.json());
 }
 
-export default {
-    findAllMovies,deleteMovie,createMovie,findMovieById
-};
+export const updateMovie = (movie) =>{
+    // send new movie
+    // include movie's ID in the URL
+    return fetch(`${URL}/${movie._id}`, {
+        // use HTTP PUT method for update
+        method: 'PUT',
+        // include movie updates in body as string
+        body: JSON.stringify(movie),
+        headers: {
+            // string formatted as JSON
+            'content-type': 'application/json'
+        }
+        // parse status response from server as JSON
+    }).then(response => response.json());
+}
+
+const service = {
+    findAllMovies,
+    deleteMovie,
+    createMovie,
+    findMovieById,
+    updateMovie
+}
+
+export default service;
 
 

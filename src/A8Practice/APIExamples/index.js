@@ -5,6 +5,7 @@ import MovieApiClient from "./MovieApiClient";
 const APIExamples = () => {
     return(
         <div>
+
             <MovieApiClient/>
             <HelloApiClient/>
         </div>
