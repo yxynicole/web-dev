@@ -3,6 +3,7 @@ import {Route} from "react-router-dom";
 import Practice from "./Practice/Practice";
 import Build from "./Build/Build";
 import A9ExploreScreen from "./Build/ExploreScreen/A9ExploreScreen";
+import A9ProfileScreen from "./Build/ProfileScreen/A9ProfileScreen"
 
 const A9 = () => {
     return (
@@ -16,6 +17,10 @@ const A9 = () => {
 
             <Route path={["/a9/twitter/Explore"]} exact={true}>
                 <A9ExploreScreen/>
+            </Route>
+
+            <Route path={["/a9/twitter/Profile"]} exact={true}>
+                <A9ProfileScreen/>
             </Route>
         </div>
     )

@@ -5,7 +5,7 @@ import TweetList from "../TweetList";
 import ProfileWrapper from "./ProfileWrapper";
 import MainNav from "./MainNav";
 
-const ProfileScreen = () => {
+const A9ProfileScreen = () => {
     return (
         <div className="row mt-2">
 
@@ -27,4 +27,4 @@ const ProfileScreen = () => {
         </div>
     )
 }
-export default ProfileScreen;
+export default A9ProfileScreen;
