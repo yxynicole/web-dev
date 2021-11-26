@@ -13,6 +13,11 @@ const Movies = () => {
 
     }, [setMovies]);
 
+    const deleteMovie = (movie) =>{
+        service.deleteMovie(movie._id)
+            .then(() => setMovies(movies.filter(m => m !== movie)));
+    }
+
     return (
         <div>
             <h2>Movies</h2>
@@ -21,6 +26,11 @@ const Movies = () => {
                     movies.map(movie =>
                                    <li key={movie._id}
                                        className="list-group-item">
+                                       <button
+                                           className="btn btn-danger float-end"
+                                           onClick={() => deleteMovie(movie)}>
+                                           Delete
+                                       </button>
                                        {movie.title}
                                    </li>
                     )
