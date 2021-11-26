@@ -5,11 +5,13 @@ const TWEET_API = BACKEND_URL + '/api/tweets';
 export const fetchAllTweets = (dispatch) => {
     fetch(TWEET_API)
         .then(response => response.json())
-        .then(tweets =>
+        .then(tweets => {
+                  console.log("fetchALL: " , tweets);
                   dispatch({
                                type: 'fetch-all-tweets',
                                tweets
                            })
+              }
         );
 }
 

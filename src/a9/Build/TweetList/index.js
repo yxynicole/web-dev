@@ -5,7 +5,13 @@ import TweetListItem from "./TweetListItem";
 
 const TweetList = () => {
     const selectAllTweets = (reducers) => reducers.tweetsReducer.tweets;
-    const tweets = useSelector(selectAllTweets);
+    let tweets = useSelector(selectAllTweets);
+
+    tweets = tweets.sort((a,b)=>{
+        console.log("comparator: ",b)
+        return b.posted.localeCompare(a.posted);
+    })
+
     const dispatch = useDispatch();
     useEffect(() => fetchAllTweets(dispatch), [dispatch])
     return (

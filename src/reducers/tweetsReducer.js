@@ -1,22 +1,20 @@
-import posts from '../data/tweets.json';
-
 const initialState = {
-    tweets: posts
+    tweets: []
 }
 
 const tweetsReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'fetch-all-tweets':
-            return({
+            return ({
                 tweets: action.tweets
             })
 
         case 'like-tweet':
             return ({
                 tweets: state.tweets.map(tweet => {
-                    if(tweet._id === action.tweet._id) {
-                        if(tweet.liked === true) {
+                    if (tweet._id === action.tweet._id) {
+                        if (tweet.liked === true) {
                             tweet.liked = false;
                             tweet.stats.likes--;
                         } else {
@@ -29,7 +27,6 @@ const tweetsReducer = (state = initialState, action) => {
                     }
                 })
             });
-
 
         case 'delete-tweet':
             return ({

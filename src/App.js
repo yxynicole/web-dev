@@ -20,23 +20,23 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
             <div className="container">
-                <Link to="/a8/practice">A8</Link> |
+                {/*<Link to="/a8/practice">A8</Link> |*/}
                 <Link to="/a9/practice">A9</Link>
 
-                <Route path={["/","/a8", "/a8/practice"]} exact={true}>
-                    <Practice/>
-                </Route>
-                <Route path={["/a8/twitter", "/a8/twitter/Home"]} exact={true}>
-                    <Build/>
-                </Route>
+                {/*<Route path={["/","/a8", "/a8/practice"]} exact={true}>*/}
+                {/*    <Practice/>*/}
+                {/*</Route>*/}
+                {/*<Route path={["/a8/twitter", "/a8/twitter/Home"]} exact={true}>*/}
+                {/*    <Build/>*/}
+                {/*</Route>*/}
 
-                <Route path={["/a8/twitter/Explore"]} exact={true}>
-                    <ExploreScreen/>
-                </Route>
+                {/*<Route path={["/a8/twitter/Explore"]} exact={true}>*/}
+                {/*    <ExploreScreen/>*/}
+                {/*</Route>*/}
 
-                <Route path={["/a8/twitter/Profile"]} exact={true}>
-                    <ProfileScreen/>
-                </Route>
+                {/*<Route path={["/a8/twitter/Profile"]} exact={true}>*/}
+                {/*    <ProfileScreen/>*/}
+                {/*</Route>*/}
 
                 <Route path="/a9">
                     <A9/>
