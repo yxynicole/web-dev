@@ -4,6 +4,10 @@ import service from './service';                        // import the movie serv
 const Movies = () => {
     // create a local movies state variable
     const [movies, setMovies] = useState([]);
+
+    // add state variable to hold movie from server
+    const [movie, setMovie] = useState({title: ''});
+
     // on load
     useEffect(() => {
         // retrieve all movies from database
@@ -28,6 +32,12 @@ const Movies = () => {
             );
     }
 
+    const findMovieById = (movie) =>{
+        service.findMovieById(movie._id)
+            .then(movie => setMovie(movie));
+    }
+
+
     return (
         <div>
             <button
@@ -38,10 +48,22 @@ const Movies = () => {
 
             <h2>Movies</h2>
             <ul className="list-group">
+                <li className="list-group-item">
+                    <input
+                        defaultValue={movie.title}
+                        className="form-control"/>
+                </li>
+
                 {
                     movies.map(movie =>
                                    <li key={movie._id}
                                        className="list-group-item">
+                                       <button
+                                           onClick={() => findMovieById (movie)}
+                                           className="btn btn-warning float-end ms-2">
+                                           Edit
+                                       </button>
+
                                        <button
                                            className="btn btn-danger float-end"
                                            onClick={() => deleteMovie(movie)}>

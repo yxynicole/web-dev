@@ -14,8 +14,16 @@ export const createMovie = (movie) =>{
     }).then(response => response.json());
 }
 
+// implement function to retrieve movie by its ID
+export const findMovieById = (id) =>{
+    // send HTTP GET to URL including movie's ID
+    // parse movie from response's body
+    return fetch(`${URL}/${id}`)
+        .then(response => response.json());
+}
+
 export default {
-    findAllMovies,deleteMovie,createMovie
+    findAllMovies,deleteMovie,createMovie,findMovieById
 };
 
 
