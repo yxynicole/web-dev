@@ -7,8 +7,11 @@ const TweetList = () => {
     const selectAllTweets = (reducers) => reducers.tweetsReducer.tweets;
     let tweets = useSelector(selectAllTweets);
 
-    tweets = tweets.sort((a,b)=>{
-        return b.posted.localeCompare(a.posted);
+    tweets = tweets.sort((a, b) => {
+        if (a.posted && b.posted) {
+            return b.posted.localeCompare(a.posted);
+        }
+        return 0;
     })
 
     const dispatch = useDispatch();
