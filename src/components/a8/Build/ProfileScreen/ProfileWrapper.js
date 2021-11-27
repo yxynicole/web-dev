@@ -8,7 +8,6 @@ import BACKEND_URL from "../../../../config";
 const ProfileWrapper = () => {
     const profileData = useSelector(reducers => reducers.profileReducer);
     const dispatch = useDispatch();
-
     useEffect(() => getCurrentProfile(dispatch), [dispatch])
 
     const PROFILE_API = BACKEND_URL + '/api/profile';
@@ -26,7 +25,7 @@ const ProfileWrapper = () => {
 
             fetch(PROFILE_API, requestOptions)
                 .then(response => response.json())
-                .then(data => {
+                .then(res => {
                     dispatch({type: 'save-profile', data})
                 })
         },
@@ -34,7 +33,7 @@ const ProfileWrapper = () => {
             dispatch({type: 'close-profile'});
         }
     }
-
+    console.log(profileData)
     if (profileData.isEdit) {
         return <EditProfile userInfo={profileData.userInfo} {...handlers}/>
     } else {

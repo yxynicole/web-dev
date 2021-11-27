@@ -49,6 +49,9 @@ const BasicInfo = (prop) => {
 
 const Profile = (prop) => {
     let userInfo = prop.userInfo;
+    if(userInfo === undefined){
+        return <></>;
+    }
     return (
         <div className="container">
             <Header {...userInfo}/>

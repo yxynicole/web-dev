@@ -99,9 +99,7 @@ const EditProfile = (prop) => {
                            value={website}
                     />
                 </div>
-
             </form>
-
         </div>
 
     )
