@@ -13,7 +13,6 @@ const MovieApiClient = () => {
     }, []);
 
     const deleteMovie = (movie) => {
-        //console.log(movie);
         fetch(`${HOST}/api/movies/${movie._id}`, {method: 'DELETE'})
             .then(response => response.json())
             .then(movies => setMovies(movies));

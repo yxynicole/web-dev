@@ -48,7 +48,6 @@ const Movies = () => {
     // when server responds
     // replace updated movie
     const saveMovie = () => {
-        console.log('save movie')
         service.updateMovie(movie)
             .then(() => setMovies(
                 movies.map(m => m._id === movie._id ? movie : m)

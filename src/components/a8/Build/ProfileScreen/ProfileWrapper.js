@@ -33,7 +33,6 @@ const ProfileWrapper = () => {
             dispatch({type: 'close-profile'});
         }
     }
-    console.log(profileData)
     if (profileData.isEdit) {
         return <EditProfile userInfo={profileData.userInfo} {...handlers}/>
     } else {

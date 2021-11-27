@@ -7,7 +7,6 @@ const HelloApiClient = () => {
     useEffect(() => {
         fetch(BACKEND_URL+'/hello')
             .then((response) => {
-                // console.log(response);
                 response.text();
             })
             .then(text => setHello(text));

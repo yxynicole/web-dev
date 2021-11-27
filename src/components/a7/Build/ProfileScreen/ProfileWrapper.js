@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from "react-redux";
 
 const ProfileWrapper = () => {
     const profileData = useSelector(reducers => reducers.profileReducer);
-    //console.log({profileData});
     const dispatch = useDispatch();
 
     const handlers = {
