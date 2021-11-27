@@ -1,6 +1,5 @@
-import React, {useEffect,useState} from "react";
+import React, {useEffect, useState} from "react";
 import WhoToFollowListItem from "./WhoToFollowListItem.js";
-import {useSelector} from "react-redux";
 import whoService from "./whoService";
 
 const listGroupMargin = {
