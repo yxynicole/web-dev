@@ -6,7 +6,6 @@ export const fetchAllTweets = (dispatch) => {
     fetch(TWEET_API)
         .then(response => response.json())
         .then(tweets => {
-                  console.log("fetchALL: " , tweets);
                   dispatch({
                                type: 'fetch-all-tweets',
                                tweets

@@ -8,7 +8,6 @@ const TweetList = () => {
     let tweets = useSelector(selectAllTweets);
 
     tweets = tweets.sort((a,b)=>{
-        console.log("comparator: ",b)
         return b.posted.localeCompare(a.posted);
     })
 
