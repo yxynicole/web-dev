@@ -3,7 +3,6 @@ import {useDispatch} from "react-redux";
 import {likeTweet} from "../../services/twitterService";
 
 const TweetStats = ({tweet}) => {
-    console.log("tweetStats, ", tweet.stats);
     const dispatch = useDispatch();
     const likeClickHandler = () => {
         // dispatch({type: 'like-tweet', tweet});
