@@ -52,24 +52,24 @@ const ExploreComponent = () => {
 
             <ul className = {"nav nav-tabs"} style = {navTabsMargin}>
                 <li className = {"nav-item"} >
-                    <a className ={"nav-link active"} href="#">For you</a>
+                    <a className ={"nav-link active"} href="./">For you</a>
                 </li>
                 <li className = {"nav-item"}>
-                    <a className ={"nav-link"} style = {listItemBgColor} href="#">Trending</a>
+                    <a className ={"nav-link"} style = {listItemBgColor} href="./">Trending</a>
                 </li>
                 <li className = {"nav-item"}>
-                    <a className = {"nav-link"} style = {listItemBgColor} href="#">News</a>
+                    <a className = {"nav-link"} style = {listItemBgColor} href="./">News</a>
                 </li>
                 <li className ={"nav-item"}>
-                    <a className ={"nav-link"}  style = {listItemBgColor} href="#">Sports</a>
+                    <a className ={"nav-link"}  style = {listItemBgColor} href="./">Sports</a>
                 </li>
                 <li className ={"nav-item"}>
-                    <a className ={"nav-link"}  style = {listItemBgColor} href="#">Entertainment</a>
+                    <a className ={"nav-link"}  style = {listItemBgColor} href="./">Entertainment</a>
                 </li>
             </ul>
 
 
-            <div><img src = {starship}  alt="Starship Mk1 Picture" className = "img-fluid" ></img></div>
+            <div><img src = {starship}  alt="Starship Mk1 Picture" className = "img-fluid" /></div>
 
 
             <PostSummaryList />

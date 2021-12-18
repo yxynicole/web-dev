@@ -11,7 +11,7 @@ const Classes = () =>{
                     Yellow Background
                 </div>
 
-                <div className="wd-bg-${color} wd-fg-black wd-padding-10px">
+                <div className={`wd-bg-${color} wd-fg-black wd-padding-10px`}>
                     Dynamic Blue Background
                 </div>
 

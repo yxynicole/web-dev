@@ -99,7 +99,7 @@ const Col10Item = (prop) => {
             <ul className="list-group" style = {listGroupMargin}>
                 <li className="list-group-item" style = {listItemBgColor}>
                     <div>
-                        <img src={require("" + prop.post.image).default} className="img-fluid" style={imageBorderRadius}/>
+                        <img src={require("" + prop.post.image).default} alt={""} className="img-fluid" style={imageBorderRadius}/>
                     </div>
                 </li>
                 <li className="list-group-item" style = {listItemBgColor} >

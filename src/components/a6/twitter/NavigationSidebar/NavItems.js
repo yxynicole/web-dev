@@ -10,10 +10,10 @@ const navIconsPadding={
     paddingRight : "3px",
 };
 
-const navLinkStyle ={
-    color: "white",
-    textDecoration:"none",
-};
+// const navLinkStyle ={
+//     color: "white",
+//     textDecoration:"none",
+// };
 
 const NavItems = (props) => {
     return (

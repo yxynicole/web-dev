@@ -4,9 +4,7 @@ import Classes from "./Classes";
 import Styles from './Styles/index.js'
 import ConditionalOutput from "./ConditionalOutput";
 import Todo from "./Todo/TodoList";
-import HelloWorld from "../HelloWorld";
-import BuildIndex from "../Build/index"
-import ExploreScreen from "../twitter/ExploreScreen/ExploreScreen";
+
 export const Practice =() =>{
     return(
         <div>
