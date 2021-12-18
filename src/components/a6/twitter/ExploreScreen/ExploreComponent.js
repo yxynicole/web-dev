@@ -69,7 +69,7 @@ const ExploreComponent = () => {
             </ul>
 
 
-            <div><img src = {starship}  alt="Starship Mk1 Picture" className = "img-fluid" /></div>
+            <div><img src = {starship}  alt="Starship Mk1" className = "img-fluid" /></div>
 
 
             <PostSummaryList />
